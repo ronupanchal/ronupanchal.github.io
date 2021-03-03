@@ -1,0 +1,726 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://localhost:8080/Pharmacology", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://localhost:8080/Pharmacology"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:equivalentClass"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://localhost:8080/Pharmacology#Symptom",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Symptom",
+      "en" : "Symptom"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#Symptom2",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Symptom2"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Symptom3",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Symptom3"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Symptom1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Symptom1"
+      }
+    } ],
+    "comment" : {
+      "en" : "Symptom like cold, fever, cough and many more."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugManufacurer",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DrugManufacurer",
+      "en" : "DrugManufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#DM3",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "DM3"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#DM2",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "DM2"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#DM4",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "DM4"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#DM1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "DM1"
+      }
+    } ],
+    "comment" : {
+      "en" : "Drug manufacturer means company name or brand name"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugType",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "DrugType",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DrugType"
+    },
+    "comment" : {
+      "en" : "Drug Type or category like generic drug"
+    },
+    "id" : "11",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#Dose",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dose",
+      "en" : "Dose"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#Dose1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Dose1"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Dose2",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Dose2"
+      }
+    } ],
+    "comment" : {
+      "en" : "Dose is in gra, ml  etc"
+    },
+    "id" : "17",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#Drug",
+    "equivalent" : [ "19" ],
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Drug",
+      "en" : "Drug"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#Drug1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Drug1"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Drug2",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Drug2"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Drug3",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Drug3"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Drug4",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Drug4"
+      }
+    } ],
+    "subClasses" : [ "18", "11", "17", "1" ],
+    "comment" : {
+      "en" : "Drug or Medicine For example Crossine"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#Content",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Content",
+      "en" : "Content"
+    },
+    "comment" : {
+      "en" : "Drug is contain specific content."
+    },
+    "id" : "18",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "18", "0", "17", "7", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#Disease",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Disease",
+      "undefined" : "Disease"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#Disease2",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Disease2"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Disease1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Disease1"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Disease4",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Disease4"
+      }
+    }, {
+      "iri" : "http://localhost:8080/Pharmacology#Disease3",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Disease3"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Disease"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#Medicine",
+    "equivalent" : [ "2" ],
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "Medicine or Drug like DIO1",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Medicine",
+      "en" : "Medicine"
+    },
+    "individuals" : [ {
+      "iri" : "http://localhost:8080/Pharmacology#Medicine1",
+      "baseIri" : "http://localhost:8080/Pharmacology",
+      "labels" : {
+        "IRI-based" : "Medicine1"
+      }
+    } ],
+    "attributes" : [ "equivalent" ],
+    "id" : "19"
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://localhost:8080/Pharmacology#Description",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "Description"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DieseaseId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "DieseaseId"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#SymptomId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "SymptomId"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsDiagnosedBy",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsDiagnosedBy"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsTypeOf",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsTypeOf"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DiseaseLatinName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "DiseaseLatinName"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#ManufacturerName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "ManufacturerName"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "DrugName"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "range" : "2",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DiseaseShortName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "DiseaseShortName"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "2",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsContain",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsContain"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsManufactureBy",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsManufactureBy"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsUsedIn",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsUsedIn"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "DrugId"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#ManufacturerId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "ManufacturerId"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#IsHaving",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "IsHaving"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugTypeName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "DrugTypeName"
+    },
+    "domain" : "11",
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DoseId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "DoseId"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DrugTypeId",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "DrugTypeId"
+    },
+    "domain" : "11",
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#SymptomName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "SymptomName"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://localhost:8080/Pharmacology#DoseShortName",
+    "baseIri" : "http://localhost:8080/Pharmacology",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "DoseShortName"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "47"
+  } ]
+}

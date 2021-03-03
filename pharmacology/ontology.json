@@ -1,0 +1,483 @@
+[ {
+  "@id" : "http://localhost:8080/Pharmacology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Content",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Drug is contain specific content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Content"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DM1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#DrugManufacurer" ],
+  "http://localhost:8080/Pharmacology#ManufacturerId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#ManufacturerName" : [ {
+    "@value" : "Zydus"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DM2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#DrugManufacurer" ],
+  "http://localhost:8080/Pharmacology#ManufacturerId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://localhost:8080/Pharmacology#ManufacturerName" : [ {
+    "@value" : "Sun Pharma"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DM3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#DrugManufacurer" ],
+  "http://localhost:8080/Pharmacology#ManufacturerId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://localhost:8080/Pharmacology#ManufacturerName" : [ {
+    "@value" : "Mankind"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DM4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#DrugManufacurer" ],
+  "http://localhost:8080/Pharmacology#ManufacturerId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://localhost:8080/Pharmacology#ManufacturerName" : [ {
+    "@value" : "Alkon"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DM5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Content"
+  }, {
+    "@id" : "http://localhost:8080/Pharmacology#Disease"
+  }, {
+    "@id" : "http://localhost:8080/Pharmacology#Dose"
+  }, {
+    "@id" : "http://localhost:8080/Pharmacology#DrugManufacurer"
+  }, {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DieseaseId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disease"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Disease" ],
+  "http://localhost:8080/Pharmacology#DieseaseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseLatinName" : [ {
+    "@value" : "Tuberculosis"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseShortName" : [ {
+    "@value" : "TB"
+  } ],
+  "http://localhost:8080/Pharmacology#IsDiagnosedBy" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom2"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Disease" ],
+  "http://localhost:8080/Pharmacology#DieseaseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseLatinName" : [ {
+    "@value" : "Hyper Tension"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseShortName" : [ {
+    "@value" : "HT"
+  } ],
+  "http://localhost:8080/Pharmacology#IsDiagnosedBy" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom3"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Disease" ],
+  "http://localhost:8080/Pharmacology#DieseaseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseLatinName" : [ {
+    "@value" : "Diabetis Melitus"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseShortName" : [ {
+    "@value" : "DM"
+  } ],
+  "http://localhost:8080/Pharmacology#IsDiagnosedBy" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom3"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Disease" ],
+  "http://localhost:8080/Pharmacology#DieseaseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseLatinName" : [ {
+    "@value" : "Tyfoid"
+  } ],
+  "http://localhost:8080/Pharmacology#DiseaseShortName" : [ {
+    "@value" : "TY"
+  } ],
+  "http://localhost:8080/Pharmacology#IsDiagnosedBy" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom1"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Disease5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DiseaseLatinName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DiseaseShortName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Disease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Dose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Dose is in gra, ml  etc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Dose1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Dose" ],
+  "http://localhost:8080/Pharmacology#DoseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#DoseShortName" : [ {
+    "@value" : "ml"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Dose2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Dose" ],
+  "http://localhost:8080/Pharmacology#DoseId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://localhost:8080/Pharmacology#DoseShortName" : [ {
+    "@value" : "mg"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Dose3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DoseId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Dose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DoseShortName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Dose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Drug or Medicine For example Crossine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Drug"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Medicine"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Drug" ],
+  "http://localhost:8080/Pharmacology#DrugId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#DrugName" : [ {
+    "@value" : "Paracetamol"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Drug" ],
+  "http://localhost:8080/Pharmacology#DrugId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://localhost:8080/Pharmacology#DrugName" : [ {
+    "@value" : "Cetrizine"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Drug" ],
+  "http://localhost:8080/Pharmacology#DrugId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://localhost:8080/Pharmacology#DrugName" : [ {
+    "@value" : "Leon"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Drug" ],
+  "http://localhost:8080/Pharmacology#DrugId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://localhost:8080/Pharmacology#DrugName" : [ {
+    "@value" : "Akilos-p"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Drug5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugManufacurer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Drug manufacturer means company name or brand name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DrugManufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Drug Type or category like generic drug"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "DrugType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Drug"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugTypeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#DrugType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#DrugTypeName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#DrugType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsContain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsDiagnosedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsHaving",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsManufactureBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsTypeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#IsUsedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#ManufacturerId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#DrugManufacurer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#ManufacturerName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#DrugManufacurer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Medicine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "Medicine or Drug like DIO1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medicine"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Medicine1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Medicine" ],
+  "http://localhost:8080/Pharmacology#DrugId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#DrugName" : [ {
+    "@value" : "Dio1"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Medicine2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Symptom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Symptom like cold, fever, cough and many more."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Symptom"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Symptom1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Symptom" ],
+  "http://localhost:8080/Pharmacology#SymptomId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://localhost:8080/Pharmacology#SymptomName" : [ {
+    "@value" : "Fever"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Symptom2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Symptom" ],
+  "http://localhost:8080/Pharmacology#SymptomId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://localhost:8080/Pharmacology#SymptomName" : [ {
+    "@value" : "Coughing"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Symptom3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://localhost:8080/Pharmacology#Symptom" ],
+  "http://localhost:8080/Pharmacology#SymptomId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://localhost:8080/Pharmacology#SymptomName" : [ {
+    "@value" : "Headache"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#Symptom4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#SymptomId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://localhost:8080/Pharmacology#SymptomName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://localhost:8080/Pharmacology#Symptom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+} ]

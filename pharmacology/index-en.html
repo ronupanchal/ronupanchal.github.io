@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Pharmacology Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://localhost:8080/Pharmacology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://localhost:8080/Pharmacology","name":"Pharmacology Ontology", "headline":"This is a Pharmacology Ontology which medical based research area.", "datePublished":"02-03-2021", "author":[{"@type":"Person","name":"Dr. Ronak Panchal"},{"@type":"Person","name":"Dr. Sanju Tiwari"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Pharmacology Ontology</h1>
+<h2>Release  02-03-2021</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="1.0">1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://localhost:8080/Pharmacology">http://localhost:8080/Pharmacology</a></dd>
+<dt>Authors:</dt>
+<dd>Dr. Ronak Panchal, VTCBB</dd><dd>Dr. Sanju Tiwari</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a Pharmacology Ontology which medical based research area.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>pharma</b></td><td>&lt;http://localhost:8080/Pharmacology&gt;</td></tr>
+<tr><td><b>localhost-8080</b></td><td>&lt;http://localhost:8080&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">PharmacologyOnto: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#Content" title="http://localhost:8080/Pharmacology#Content">Content</a>
+   </li>
+   <li>
+      <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+   </li>
+   <li>
+      <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+   </li>
+   <li>
+      <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+   </li>
+   <li>
+      <a href="#DrugType" title="http://localhost:8080/Pharmacology#DrugType">
+         <span>drug type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DrugManufacurer"
+         title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+   </li>
+   <li>
+      <a href="#Medicine" title="http://localhost:8080/Pharmacology#Medicine">Medicine</a>
+   </li>
+   <li>
+      <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#Description" title="http://localhost:8080/Pharmacology#Description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">
+         <span>diesease id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DiseaseLatinName"
+         title="http://localhost:8080/Pharmacology#DiseaseLatinName">
+         <span>disease latin name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DiseaseShortName"
+         title="http://localhost:8080/Pharmacology#DiseaseShortName">
+         <span>disease short name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DoseId" title="http://localhost:8080/Pharmacology#DoseId">
+         <span>dose id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DoseShortName" title="http://localhost:8080/Pharmacology#DoseShortName">
+         <span>dose short name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">
+         <span>drug id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">
+         <span>drug name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DrugTypeId" title="http://localhost:8080/Pharmacology#DrugTypeId">
+         <span>drug type id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DrugTypeName" title="http://localhost:8080/Pharmacology#DrugTypeName">
+         <span>drug type name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ManufacturerId"
+         title="http://localhost:8080/Pharmacology#ManufacturerId">
+         <span>manufacturer id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ManufacturerName"
+         title="http://localhost:8080/Pharmacology#ManufacturerName">
+         <span>manufacturer name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">
+         <span>symptom id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">
+         <span>symptom name</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#DM1" title="http://localhost:8080/Pharmacology#DM1">
+         <span>d m1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DM2" title="http://localhost:8080/Pharmacology#DM2">
+         <span>d m2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DM3" title="http://localhost:8080/Pharmacology#DM3">
+         <span>d m3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DM4" title="http://localhost:8080/Pharmacology#DM4">
+         <span>d m4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Disease1" title="http://localhost:8080/Pharmacology#Disease1">
+         <span>disease1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Disease2" title="http://localhost:8080/Pharmacology#Disease2">
+         <span>disease2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Disease3" title="http://localhost:8080/Pharmacology#Disease3">
+         <span>disease3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Disease4" title="http://localhost:8080/Pharmacology#Disease4">
+         <span>disease4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Dose1" title="http://localhost:8080/Pharmacology#Dose1">
+         <span>dose1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Dose2" title="http://localhost:8080/Pharmacology#Dose2">
+         <span>dose2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Drug1" title="http://localhost:8080/Pharmacology#Drug1">
+         <span>drug1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Drug2" title="http://localhost:8080/Pharmacology#Drug2">
+         <span>drug2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Drug3" title="http://localhost:8080/Pharmacology#Drug3">
+         <span>drug3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Drug4" title="http://localhost:8080/Pharmacology#Drug4">
+         <span>drug4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Medicine1" title="http://localhost:8080/Pharmacology#Medicine1">
+         <span>medicine1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Symptom1" title="http://localhost:8080/Pharmacology#Symptom1">
+         <span>symptom1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Symptom2" title="http://localhost:8080/Pharmacology#Symptom2">
+         <span>symptom2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Symptom3" title="http://localhost:8080/Pharmacology#Symptom3">
+         <span>symptom3</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">PharmacologyOnto: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for PharmacologyOnto classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by PharmacologyOnto.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Content" title="http://localhost:8080/Pharmacology#Content">Content</a>
+      </li>
+      <li>
+         <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+      </li>
+      <li>
+         <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+      </li>
+      <li>
+         <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+      </li>
+      <li>
+         <a href="#DrugType" title="http://localhost:8080/Pharmacology#DrugType">
+            <span>drug type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DrugManufacurer"
+            title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+      </li>
+      <li>
+         <a href="#Medicine" title="http://localhost:8080/Pharmacology#Medicine">Medicine</a>
+      </li>
+      <li>
+         <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+      </li>
+   </ul>
+   <div class="entity" id="Content">
+      <h3>Content<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Content</p>
+      <div class="comment">
+         <span class="markdown">Drug is contain specific content.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#Description" title="http://localhost:8080/Pharmacology#Description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Disease">
+      <h3>Disease<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Disease</p>
+      <div class="comment">
+         <span class="markdown">Disease</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#Description" title="http://localhost:8080/Pharmacology#Description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">diesease id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DiseaseLatinName"
+               title="http://localhost:8080/Pharmacology#DiseaseLatinName">disease latin name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DiseaseShortName"
+               title="http://localhost:8080/Pharmacology#DiseaseShortName">disease short name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Disease1" title="http://localhost:8080/Pharmacology#Disease1">disease1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Disease2" title="http://localhost:8080/Pharmacology#Disease2">disease2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Disease3" title="http://localhost:8080/Pharmacology#Disease3">disease3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Disease4" title="http://localhost:8080/Pharmacology#Disease4">disease4</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Dose">
+      <h3>Dose<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Dose</p>
+      <div class="comment">
+         <span class="markdown">Dose is in gra, ml  etc</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#Description" title="http://localhost:8080/Pharmacology#Description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DoseId" title="http://localhost:8080/Pharmacology#DoseId">dose id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DoseShortName" title="http://localhost:8080/Pharmacology#DoseShortName">dose short name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Dose1" title="http://localhost:8080/Pharmacology#Dose1">dose1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Dose2" title="http://localhost:8080/Pharmacology#Dose2">dose2</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Drug">
+      <h3>Drug<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Drug</p>
+      <div class="comment">
+         <span class="markdown">Drug or Medicine For example Crossine</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Medicine" title="http://localhost:8080/Pharmacology#Medicine">Medicine</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Content" title="http://localhost:8080/Pharmacology#Content">Content</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DrugManufacurer"
+               title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DrugType" title="http://localhost:8080/Pharmacology#DrugType">drug type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Drug1" title="http://localhost:8080/Pharmacology#Drug1">drug1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Drug2" title="http://localhost:8080/Pharmacology#Drug2">drug2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Drug3" title="http://localhost:8080/Pharmacology#Drug3">drug3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Drug4" title="http://localhost:8080/Pharmacology#Drug4">drug4</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DrugType">
+      <h3>drug type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugType</p>
+      <div class="comment">
+         <span class="markdown">Drug Type or category like generic drug</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#DrugTypeId" title="http://localhost:8080/Pharmacology#DrugTypeId">drug type id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#DrugTypeName" title="http://localhost:8080/Pharmacology#DrugTypeName">drug type name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DrugManufacurer">
+      <h3>DrugManufacturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugManufacurer</p>
+      <div class="comment">
+         <span class="markdown">Drug manufacturer means company name or brand name</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://localhost:8080/Pharmacology</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#Description" title="http://localhost:8080/Pharmacology#Description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ManufacturerId"
+               title="http://localhost:8080/Pharmacology#ManufacturerId">manufacturer id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ManufacturerName"
+               title="http://localhost:8080/Pharmacology#ManufacturerName">manufacturer name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#DM1" title="http://localhost:8080/Pharmacology#DM1">d m1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DM2" title="http://localhost:8080/Pharmacology#DM2">d m2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DM3" title="http://localhost:8080/Pharmacology#DM3">d m3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DM4" title="http://localhost:8080/Pharmacology#DM4">d m4</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Medicine">
+      <h3>Medicine<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Medicine</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://localhost:8080/Pharmacology</dd>
+      </dl>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#Medicine1" title="http://localhost:8080/Pharmacology#Medicine1">medicine1</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Symptom">
+      <h3>Symptom<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Symptom</p>
+      <div class="comment">
+         <span class="markdown">Symptom like cold, fever, cough and many more.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#Description" title="http://localhost:8080/Pharmacology#Description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">symptom id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">symptom name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Symptom1" title="http://localhost:8080/Pharmacology#Symptom1">symptom1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Symptom2" title="http://localhost:8080/Pharmacology#Symptom2">symptom2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Symptom3" title="http://localhost:8080/Pharmacology#Symptom3">symptom3</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Description" title="http://localhost:8080/Pharmacology#Description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">
+            <span>diesease id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DiseaseLatinName"
+            title="http://localhost:8080/Pharmacology#DiseaseLatinName">
+            <span>disease latin name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DiseaseShortName"
+            title="http://localhost:8080/Pharmacology#DiseaseShortName">
+            <span>disease short name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DoseId" title="http://localhost:8080/Pharmacology#DoseId">
+            <span>dose id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DoseShortName" title="http://localhost:8080/Pharmacology#DoseShortName">
+            <span>dose short name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">
+            <span>drug id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">
+            <span>drug name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DrugTypeId" title="http://localhost:8080/Pharmacology#DrugTypeId">
+            <span>drug type id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DrugTypeName" title="http://localhost:8080/Pharmacology#DrugTypeName">
+            <span>drug type name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ManufacturerId"
+            title="http://localhost:8080/Pharmacology#ManufacturerId">
+            <span>manufacturer id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ManufacturerName"
+            title="http://localhost:8080/Pharmacology#ManufacturerName">
+            <span>manufacturer name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">
+            <span>symptom id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">
+            <span>symptom name</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Description</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Content" title="http://localhost:8080/Pharmacology#Content">Content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#DrugManufacurer"
+                  title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DieseaseId">
+      <h3>diesease id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DieseaseId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DiseaseLatinName">
+      <h3>disease latin name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DiseaseLatinName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DiseaseShortName">
+      <h3>disease short name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DiseaseShortName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DoseId">
+      <h3>dose id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DoseId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DoseShortName">
+      <h3>dose short name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DoseShortName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DrugId">
+      <h3>drug id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DrugName">
+      <h3>drug name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DrugTypeId">
+      <h3>drug type id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugTypeId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DrugType" title="http://localhost:8080/Pharmacology#DrugType">drug type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DrugTypeName">
+      <h3>drug type name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DrugTypeName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DrugType" title="http://localhost:8080/Pharmacology#DrugType">drug type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ManufacturerId">
+      <h3>manufacturer id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#ManufacturerId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DrugManufacurer"
+                  title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ManufacturerName">
+      <h3>manufacturer name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#ManufacturerName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DrugManufacurer"
+                  title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SymptomId">
+      <h3>symptom id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#SymptomId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SymptomName">
+      <h3>symptom name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#SymptomName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DM1" title="http://localhost:8080/Pharmacology#DM1">
+            <span>d m1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DM2" title="http://localhost:8080/Pharmacology#DM2">
+            <span>d m2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DM3" title="http://localhost:8080/Pharmacology#DM3">
+            <span>d m3</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DM4" title="http://localhost:8080/Pharmacology#DM4">
+            <span>d m4</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Disease1" title="http://localhost:8080/Pharmacology#Disease1">
+            <span>disease1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Disease2" title="http://localhost:8080/Pharmacology#Disease2">
+            <span>disease2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Disease3" title="http://localhost:8080/Pharmacology#Disease3">
+            <span>disease3</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Disease4" title="http://localhost:8080/Pharmacology#Disease4">
+            <span>disease4</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Dose1" title="http://localhost:8080/Pharmacology#Dose1">
+            <span>dose1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Dose2" title="http://localhost:8080/Pharmacology#Dose2">
+            <span>dose2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Drug1" title="http://localhost:8080/Pharmacology#Drug1">
+            <span>drug1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Drug2" title="http://localhost:8080/Pharmacology#Drug2">
+            <span>drug2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Drug3" title="http://localhost:8080/Pharmacology#Drug3">
+            <span>drug3</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Drug4" title="http://localhost:8080/Pharmacology#Drug4">
+            <span>drug4</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Medicine1" title="http://localhost:8080/Pharmacology#Medicine1">
+            <span>medicine1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Symptom1" title="http://localhost:8080/Pharmacology#Symptom1">
+            <span>symptom1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Symptom2" title="http://localhost:8080/Pharmacology#Symptom2">
+            <span>symptom2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Symptom3" title="http://localhost:8080/Pharmacology#Symptom3">
+            <span>symptom3</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="DM1">
+      <h3>d m1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DM1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DrugManufacurer"
+               title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#ManufacturerId"
+               title="http://localhost:8080/Pharmacology#ManufacturerId">manufacturer id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#ManufacturerName"
+               title="http://localhost:8080/Pharmacology#ManufacturerName">manufacturer name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Zydus"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DM2">
+      <h3>d m2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DM2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DrugManufacurer"
+               title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#ManufacturerId"
+               title="http://localhost:8080/Pharmacology#ManufacturerId">manufacturer id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#ManufacturerName"
+               title="http://localhost:8080/Pharmacology#ManufacturerName">manufacturer name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sun Pharma"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DM3">
+      <h3>d m3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DM3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DrugManufacurer"
+               title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#ManufacturerId"
+               title="http://localhost:8080/Pharmacology#ManufacturerId">manufacturer id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#ManufacturerName"
+               title="http://localhost:8080/Pharmacology#ManufacturerName">manufacturer name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Mankind"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DM4">
+      <h3>d m4<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#DM4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DrugManufacurer"
+               title="http://localhost:8080/Pharmacology#DrugManufacurer">DrugManufacturer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#ManufacturerId"
+               title="http://localhost:8080/Pharmacology#ManufacturerId">manufacturer id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"4"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#ManufacturerName"
+               title="http://localhost:8080/Pharmacology#ManufacturerName">manufacturer name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Alkon"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Disease1">
+      <h3>disease1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Disease1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <span class="dotted" title="http://localhost:8080/Pharmacology#IsDiagnosedBy">is diagnosed by</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Symptom2" title="http://localhost:8080/Pharmacology#Symptom2">symptom2</a>
+         </dd>
+         <dd>
+            <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">diesease id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DiseaseLatinName"
+               title="http://localhost:8080/Pharmacology#DiseaseLatinName">disease latin name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Tuberculosis"</span>
+         </dd>
+         <dd>
+            <a href="#DiseaseShortName"
+               title="http://localhost:8080/Pharmacology#DiseaseShortName">disease short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"TB"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Disease2">
+      <h3>disease2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Disease2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <span class="dotted" title="http://localhost:8080/Pharmacology#IsDiagnosedBy">is diagnosed by</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Symptom3" title="http://localhost:8080/Pharmacology#Symptom3">symptom3</a>
+         </dd>
+         <dd>
+            <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">diesease id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DiseaseLatinName"
+               title="http://localhost:8080/Pharmacology#DiseaseLatinName">disease latin name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Hyper Tension"</span>
+         </dd>
+         <dd>
+            <a href="#DiseaseShortName"
+               title="http://localhost:8080/Pharmacology#DiseaseShortName">disease short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"HT"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Disease3">
+      <h3>disease3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Disease3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <span class="dotted" title="http://localhost:8080/Pharmacology#IsDiagnosedBy">is diagnosed by</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Symptom3" title="http://localhost:8080/Pharmacology#Symptom3">symptom3</a>
+         </dd>
+         <dd>
+            <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">diesease id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DiseaseLatinName"
+               title="http://localhost:8080/Pharmacology#DiseaseLatinName">disease latin name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Diabetis Melitus"</span>
+         </dd>
+         <dd>
+            <a href="#DiseaseShortName"
+               title="http://localhost:8080/Pharmacology#DiseaseShortName">disease short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"DM"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Disease4">
+      <h3>disease4<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Disease4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Disease" title="http://localhost:8080/Pharmacology#Disease">Disease</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <span class="dotted" title="http://localhost:8080/Pharmacology#IsDiagnosedBy">is diagnosed by</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Symptom1" title="http://localhost:8080/Pharmacology#Symptom1">symptom1</a>
+         </dd>
+         <dd>
+            <a href="#DieseaseId" title="http://localhost:8080/Pharmacology#DieseaseId">diesease id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"4"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DiseaseLatinName"
+               title="http://localhost:8080/Pharmacology#DiseaseLatinName">disease latin name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Tyfoid"</span>
+         </dd>
+         <dd>
+            <a href="#DiseaseShortName"
+               title="http://localhost:8080/Pharmacology#DiseaseShortName">disease short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"TY"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Dose1">
+      <h3>dose1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Dose1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DoseId" title="http://localhost:8080/Pharmacology#DoseId">dose id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DoseShortName" title="http://localhost:8080/Pharmacology#DoseShortName">dose short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"ml"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Dose2">
+      <h3>dose2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Dose2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Dose" title="http://localhost:8080/Pharmacology#Dose">Dose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DoseId" title="http://localhost:8080/Pharmacology#DoseId">dose id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DoseShortName" title="http://localhost:8080/Pharmacology#DoseShortName">dose short name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"mg"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Drug1">
+      <h3>drug1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Drug1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Paracetamol"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Drug2">
+      <h3>drug2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Drug2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Cetrizine"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Drug3">
+      <h3>drug3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Drug3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Leon"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Drug4">
+      <h3>drug4<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Drug4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Drug" title="http://localhost:8080/Pharmacology#Drug">Drug</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"4"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Akilos-p"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Medicine1">
+      <h3>medicine1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Medicine1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Medicine" title="http://localhost:8080/Pharmacology#Medicine">Medicine</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#DrugId" title="http://localhost:8080/Pharmacology#DrugId">drug id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#DrugName" title="http://localhost:8080/Pharmacology#DrugName">drug name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Dio1"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Symptom1">
+      <h3>symptom1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Symptom1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">symptom id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">symptom name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Fever"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Symptom2">
+      <h3>symptom2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Symptom2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">symptom id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"2"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">symptom name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Coughing"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Symptom3">
+      <h3>symptom3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://localhost:8080/Pharmacology#Symptom3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Symptom" title="http://localhost:8080/Pharmacology#Symptom">Symptom</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#SymptomId" title="http://localhost:8080/Pharmacology#SymptomId">symptom id</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"3"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+         <dd>
+            <a href="#SymptomName" title="http://localhost:8080/Pharmacology#SymptomName">symptom name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Headache"</span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

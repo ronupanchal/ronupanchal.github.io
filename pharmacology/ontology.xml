@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:8080/Pharmacology#"
+     xml:base="http://localhost:8080/Pharmacology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Pharmacology="http://localhost:8080/Pharmacology#">
+    <owl:Ontology rdf:about="http://localhost:8080/Pharmacology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsContain -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsContain"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsDiagnosedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsDiagnosedBy"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsHaving -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsHaving"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsManufactureBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsManufactureBy"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsTypeOf"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#IsUsedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/Pharmacology#IsUsedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#Description">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Content"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Dose"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DieseaseId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DieseaseId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DiseaseLatinName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DiseaseLatinName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DiseaseShortName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DiseaseShortName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DoseId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DoseId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Dose"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DoseShortName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DoseShortName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Dose"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DrugId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DrugName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugTypeId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DrugTypeId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#DrugType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugTypeName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#DrugTypeName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#DrugType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#ManufacturerId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#ManufacturerId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#ManufacturerName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#ManufacturerName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#SymptomId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#SymptomId">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#SymptomName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://localhost:8080/Pharmacology#SymptomName">
+        <rdfs:domain rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Content -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Content">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:comment xml:lang="en">Drug is contain specific content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Disease">
+        <rdfs:comment>Disease</rdfs:comment>
+        <rdfs:label>Disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Dose -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Dose">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:comment xml:lang="en">Dose is in gra, ml  etc</rdfs:comment>
+        <rdfs:label xml:lang="en">Dose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Drug">
+        <owl:equivalentClass rdf:resource="http://localhost:8080/Pharmacology#Medicine"/>
+        <rdfs:comment xml:lang="en">Drug or Medicine For example Crossine</rdfs:comment>
+        <rdfs:label xml:lang="en">Drug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugManufacurer -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#DrugManufacurer">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:comment xml:lang="en">Drug manufacturer means company name or brand name</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en"></rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">DrugManufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DrugType -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#DrugType">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <rdfs:comment xml:lang="en">Drug Type or category like generic drug</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">DrugType</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Medicine -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Medicine">
+        <rdfs:isDefinedBy xml:lang="en">Medicine or Drug like DIO1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Medicine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Symptom -->
+
+
+    <owl:Class rdf:about="http://localhost:8080/Pharmacology#Symptom">
+        <rdfs:comment xml:lang="en">Symptom like cold, fever, cough and many more.</rdfs:comment>
+        <rdfs:label xml:lang="en">Symptom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DM1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#DM1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <ManufacturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ManufacturerId>
+        <ManufacturerName>Zydus</ManufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DM2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#DM2">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <ManufacturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ManufacturerId>
+        <ManufacturerName>Sun Pharma</ManufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DM3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#DM3">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <ManufacturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ManufacturerId>
+        <ManufacturerName>Mankind</ManufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DM4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#DM4">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#DrugManufacurer"/>
+        <ManufacturerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ManufacturerId>
+        <ManufacturerName>Alkon</ManufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#DM5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#DM5"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Disease1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <IsDiagnosedBy rdf:resource="http://localhost:8080/Pharmacology#Symptom2"/>
+        <DieseaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DieseaseId>
+        <DiseaseLatinName>Tuberculosis</DiseaseLatinName>
+        <DiseaseShortName>TB</DiseaseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Disease2">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <IsDiagnosedBy rdf:resource="http://localhost:8080/Pharmacology#Symptom3"/>
+        <DieseaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DieseaseId>
+        <DiseaseLatinName>Hyper Tension</DiseaseLatinName>
+        <DiseaseShortName>HT</DiseaseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Disease3">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <IsDiagnosedBy rdf:resource="http://localhost:8080/Pharmacology#Symptom3"/>
+        <DieseaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DieseaseId>
+        <DiseaseLatinName>Diabetis Melitus</DiseaseLatinName>
+        <DiseaseShortName>DM</DiseaseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Disease4">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Disease"/>
+        <IsDiagnosedBy rdf:resource="http://localhost:8080/Pharmacology#Symptom1"/>
+        <DieseaseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DieseaseId>
+        <DiseaseLatinName>Tyfoid</DiseaseLatinName>
+        <DiseaseShortName>TY</DiseaseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Disease5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Disease5"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Dose1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Dose1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Dose"/>
+        <DoseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DoseId>
+        <DoseShortName>ml</DoseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Dose2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Dose2">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Dose"/>
+        <DoseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DoseId>
+        <DoseShortName>mg</DoseShortName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Dose3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Dose3"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Drug1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <DrugId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DrugId>
+        <DrugName>Paracetamol</DrugName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Drug2">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <DrugId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</DrugId>
+        <DrugName>Cetrizine</DrugName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Drug3">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <DrugId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</DrugId>
+        <DrugName>Leon</DrugName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Drug4">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Drug"/>
+        <DrugId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</DrugId>
+        <DrugName>Akilos-p</DrugName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Drug5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Drug5"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Medicine1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Medicine1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Medicine"/>
+        <DrugId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</DrugId>
+        <DrugName>Dio1</DrugName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Medicine2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Medicine2"/>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Symptom1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Symptom1">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <SymptomId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SymptomId>
+        <SymptomName>Fever</SymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Symptom2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Symptom2">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <SymptomId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SymptomId>
+        <SymptomName>Coughing</SymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Symptom3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Symptom3">
+        <rdf:type rdf:resource="http://localhost:8080/Pharmacology#Symptom"/>
+        <SymptomId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SymptomId>
+        <SymptomName>Headache</SymptomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/Pharmacology#Symptom4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/Pharmacology#Symptom4"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

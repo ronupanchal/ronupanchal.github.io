@@ -1,0 +1,351 @@
+@prefix : <http://localhost:8080/Pharmacology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://localhost:8080/Pharmacology> .
+
+<http://localhost:8080/Pharmacology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://localhost:8080/Pharmacology#IsContain
+:IsContain rdf:type owl:ObjectProperty .
+
+
+###  http://localhost:8080/Pharmacology#IsDiagnosedBy
+:IsDiagnosedBy rdf:type owl:ObjectProperty .
+
+
+###  http://localhost:8080/Pharmacology#IsHaving
+:IsHaving rdf:type owl:ObjectProperty .
+
+
+###  http://localhost:8080/Pharmacology#IsManufactureBy
+:IsManufactureBy rdf:type owl:ObjectProperty .
+
+
+###  http://localhost:8080/Pharmacology#IsTypeOf
+:IsTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://localhost:8080/Pharmacology#IsUsedIn
+:IsUsedIn rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://localhost:8080/Pharmacology#Description
+:Description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Content ,
+                         :Disease ,
+                         :Dose ,
+                         :DrugManufacurer ,
+                         :Symptom ;
+             rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#DieseaseId
+:DieseaseId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Disease ;
+            rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#DiseaseLatinName
+:DiseaseLatinName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Disease ;
+                  rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#DiseaseShortName
+:DiseaseShortName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Disease ;
+                  rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#DoseId
+:DoseId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Dose ;
+        rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#DoseShortName
+:DoseShortName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Dose ;
+               rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#DrugId
+:DrugId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Drug ;
+        rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#DrugName
+:DrugName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Drug ;
+          rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#DrugTypeId
+:DrugTypeId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DrugType ;
+            rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#DrugTypeName
+:DrugTypeName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :DrugType ;
+              rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#ManufacturerId
+:ManufacturerId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DrugManufacurer ;
+                rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#ManufacturerName
+:ManufacturerName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :DrugManufacurer ;
+                  rdfs:range xsd:string .
+
+
+###  http://localhost:8080/Pharmacology#SymptomId
+:SymptomId rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Symptom ;
+           rdfs:range xsd:integer .
+
+
+###  http://localhost:8080/Pharmacology#SymptomName
+:SymptomName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Symptom ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://localhost:8080/Pharmacology#Content
+:Content rdf:type owl:Class ;
+         rdfs:subClassOf :Drug ;
+         rdfs:comment "Drug is contain specific content."@en ;
+         rdfs:label "Content"@en .
+
+
+###  http://localhost:8080/Pharmacology#Disease
+:Disease rdf:type owl:Class ;
+         rdfs:comment "Disease" ;
+         rdfs:label "Disease" .
+
+
+###  http://localhost:8080/Pharmacology#Dose
+:Dose rdf:type owl:Class ;
+      rdfs:subClassOf :Drug ;
+      rdfs:comment "Dose is in gra, ml  etc"@en ;
+      rdfs:label "Dose"@en .
+
+
+###  http://localhost:8080/Pharmacology#Drug
+:Drug rdf:type owl:Class ;
+      owl:equivalentClass :Medicine ;
+      rdfs:comment "Drug or Medicine For example Crossine"@en ;
+      rdfs:label "Drug"@en .
+
+
+###  http://localhost:8080/Pharmacology#DrugManufacurer
+:DrugManufacurer rdf:type owl:Class ;
+                 rdfs:subClassOf :Drug ;
+                 rdfs:comment "Drug manufacturer means company name or brand name"@en ;
+                 rdfs:isDefinedBy ""@en ;
+                 rdfs:label "DrugManufacturer"@en .
+
+
+###  http://localhost:8080/Pharmacology#DrugType
+:DrugType rdf:type owl:Class ;
+          rdfs:subClassOf :Drug ;
+          rdfs:comment "Drug Type or category like generic drug"@en ;
+          rdfs:seeAlso "DrugType"@en .
+
+
+###  http://localhost:8080/Pharmacology#Medicine
+:Medicine rdf:type owl:Class ;
+          rdfs:isDefinedBy "Medicine or Drug like DIO1"@en ;
+          rdfs:label "Medicine"@en .
+
+
+###  http://localhost:8080/Pharmacology#Symptom
+:Symptom rdf:type owl:Class ;
+         rdfs:comment "Symptom like cold, fever, cough and many more."@en ;
+         rdfs:label "Symptom"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://localhost:8080/Pharmacology#DM1
+:DM1 rdf:type owl:NamedIndividual ,
+              :DrugManufacurer ;
+     :ManufacturerId 1 ;
+     :ManufacturerName "Zydus" .
+
+
+###  http://localhost:8080/Pharmacology#DM2
+:DM2 rdf:type owl:NamedIndividual ,
+              :DrugManufacurer ;
+     :ManufacturerId 2 ;
+     :ManufacturerName "Sun Pharma" .
+
+
+###  http://localhost:8080/Pharmacology#DM3
+:DM3 rdf:type owl:NamedIndividual ,
+              :DrugManufacurer ;
+     :ManufacturerId 3 ;
+     :ManufacturerName "Mankind" .
+
+
+###  http://localhost:8080/Pharmacology#DM4
+:DM4 rdf:type owl:NamedIndividual ,
+              :DrugManufacurer ;
+     :ManufacturerId 4 ;
+     :ManufacturerName "Alkon" .
+
+
+###  http://localhost:8080/Pharmacology#DM5
+:DM5 rdf:type owl:NamedIndividual .
+
+
+###  http://localhost:8080/Pharmacology#Disease1
+:Disease1 rdf:type owl:NamedIndividual ,
+                   :Disease ;
+          :IsDiagnosedBy :Symptom2 ;
+          :DieseaseId 1 ;
+          :DiseaseLatinName "Tuberculosis" ;
+          :DiseaseShortName "TB" .
+
+
+###  http://localhost:8080/Pharmacology#Disease2
+:Disease2 rdf:type owl:NamedIndividual ,
+                   :Disease ;
+          :IsDiagnosedBy :Symptom3 ;
+          :DieseaseId 2 ;
+          :DiseaseLatinName "Hyper Tension" ;
+          :DiseaseShortName "HT" .
+
+
+###  http://localhost:8080/Pharmacology#Disease3
+:Disease3 rdf:type owl:NamedIndividual ,
+                   :Disease ;
+          :IsDiagnosedBy :Symptom3 ;
+          :DieseaseId 3 ;
+          :DiseaseLatinName "Diabetis Melitus" ;
+          :DiseaseShortName "DM" .
+
+
+###  http://localhost:8080/Pharmacology#Disease4
+:Disease4 rdf:type owl:NamedIndividual ,
+                   :Disease ;
+          :IsDiagnosedBy :Symptom1 ;
+          :DieseaseId 4 ;
+          :DiseaseLatinName "Tyfoid" ;
+          :DiseaseShortName "TY" .
+
+
+###  http://localhost:8080/Pharmacology#Disease5
+:Disease5 rdf:type owl:NamedIndividual .
+
+
+###  http://localhost:8080/Pharmacology#Dose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                :Dose ;
+       :DoseId 1 ;
+       :DoseShortName "ml" .
+
+
+###  http://localhost:8080/Pharmacology#Dose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                :Dose ;
+       :DoseId 2 ;
+       :DoseShortName "mg" .
+
+
+###  http://localhost:8080/Pharmacology#Dose3
+:Dose3 rdf:type owl:NamedIndividual .
+
+
+###  http://localhost:8080/Pharmacology#Drug1
+:Drug1 rdf:type owl:NamedIndividual ,
+                :Drug ;
+       :DrugId 1 ;
+       :DrugName "Paracetamol" .
+
+
+###  http://localhost:8080/Pharmacology#Drug2
+:Drug2 rdf:type owl:NamedIndividual ,
+                :Drug ;
+       :DrugId 2 ;
+       :DrugName "Cetrizine" .
+
+
+###  http://localhost:8080/Pharmacology#Drug3
+:Drug3 rdf:type owl:NamedIndividual ,
+                :Drug ;
+       :DrugId 3 ;
+       :DrugName "Leon" .
+
+
+###  http://localhost:8080/Pharmacology#Drug4
+:Drug4 rdf:type owl:NamedIndividual ,
+                :Drug ;
+       :DrugId 4 ;
+       :DrugName "Akilos-p" .
+
+
+###  http://localhost:8080/Pharmacology#Drug5
+:Drug5 rdf:type owl:NamedIndividual .
+
+
+###  http://localhost:8080/Pharmacology#Medicine1
+:Medicine1 rdf:type owl:NamedIndividual ,
+                    :Medicine ;
+           :DrugId 1 ;
+           :DrugName "Dio1" .
+
+
+###  http://localhost:8080/Pharmacology#Medicine2
+:Medicine2 rdf:type owl:NamedIndividual .
+
+
+###  http://localhost:8080/Pharmacology#Symptom1
+:Symptom1 rdf:type owl:NamedIndividual ,
+                   :Symptom ;
+          :SymptomId 1 ;
+          :SymptomName "Fever" .
+
+
+###  http://localhost:8080/Pharmacology#Symptom2
+:Symptom2 rdf:type owl:NamedIndividual ,
+                   :Symptom ;
+          :SymptomId 2 ;
+          :SymptomName "Coughing" .
+
+
+###  http://localhost:8080/Pharmacology#Symptom3
+:Symptom3 rdf:type owl:NamedIndividual ,
+                   :Symptom ;
+          :SymptomId 3 ;
+          :SymptomName "Headache" .
+
+
+###  http://localhost:8080/Pharmacology#Symptom4
+:Symptom4 rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

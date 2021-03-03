@@ -1,0 +1,310 @@
+<http://localhost:8080/Pharmacology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://localhost:8080/Pharmacology#IsContain
+<http://localhost:8080/Pharmacology#IsContain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://localhost:8080/Pharmacology#IsDiagnosedBy
+<http://localhost:8080/Pharmacology#IsDiagnosedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://localhost:8080/Pharmacology#IsHaving
+<http://localhost:8080/Pharmacology#IsHaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://localhost:8080/Pharmacology#IsManufactureBy
+<http://localhost:8080/Pharmacology#IsManufactureBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://localhost:8080/Pharmacology#IsTypeOf
+<http://localhost:8080/Pharmacology#IsTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://localhost:8080/Pharmacology#IsUsedIn
+<http://localhost:8080/Pharmacology#IsUsedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://localhost:8080/Pharmacology#Description
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Content> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Dose> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#Description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#DieseaseId
+<http://localhost:8080/Pharmacology#DieseaseId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DieseaseId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#DieseaseId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#DiseaseLatinName
+<http://localhost:8080/Pharmacology#DiseaseLatinName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DiseaseLatinName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#DiseaseLatinName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#DiseaseShortName
+<http://localhost:8080/Pharmacology#DiseaseShortName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DiseaseShortName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#DiseaseShortName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#DoseId
+<http://localhost:8080/Pharmacology#DoseId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DoseId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Dose> .
+<http://localhost:8080/Pharmacology#DoseId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#DoseShortName
+<http://localhost:8080/Pharmacology#DoseShortName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DoseShortName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Dose> .
+<http://localhost:8080/Pharmacology#DoseShortName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#DrugId
+<http://localhost:8080/Pharmacology#DrugId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DrugId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#DrugId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#DrugName
+<http://localhost:8080/Pharmacology#DrugName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DrugName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#DrugName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#DrugTypeId
+<http://localhost:8080/Pharmacology#DrugTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DrugTypeId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#DrugType> .
+<http://localhost:8080/Pharmacology#DrugTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#DrugTypeName
+<http://localhost:8080/Pharmacology#DrugTypeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#DrugTypeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#DrugType> .
+<http://localhost:8080/Pharmacology#DrugTypeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#ManufacturerId
+<http://localhost:8080/Pharmacology#ManufacturerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#ManufacturerId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#ManufacturerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#ManufacturerName
+<http://localhost:8080/Pharmacology#ManufacturerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#ManufacturerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#ManufacturerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://localhost:8080/Pharmacology#SymptomId
+<http://localhost:8080/Pharmacology#SymptomId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#SymptomId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#SymptomId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://localhost:8080/Pharmacology#SymptomName
+<http://localhost:8080/Pharmacology#SymptomName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://localhost:8080/Pharmacology#SymptomName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#SymptomName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://localhost:8080/Pharmacology#Content
+<http://localhost:8080/Pharmacology#Content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Content> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Content> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug is contain specific content."@en .
+<http://localhost:8080/Pharmacology#Content> <http://www.w3.org/2000/01/rdf-schema#label> "Content"@en .
+# 
+# http://localhost:8080/Pharmacology#Disease
+<http://localhost:8080/Pharmacology#Disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Disease> <http://www.w3.org/2000/01/rdf-schema#comment> "Disease" .
+<http://localhost:8080/Pharmacology#Disease> <http://www.w3.org/2000/01/rdf-schema#label> "Disease" .
+# 
+# http://localhost:8080/Pharmacology#Dose
+<http://localhost:8080/Pharmacology#Dose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Dose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Dose> <http://www.w3.org/2000/01/rdf-schema#comment> "Dose is in gra, ml  etc"@en .
+<http://localhost:8080/Pharmacology#Dose> <http://www.w3.org/2000/01/rdf-schema#label> "Dose"@en .
+# 
+# http://localhost:8080/Pharmacology#Drug
+<http://localhost:8080/Pharmacology#Drug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Drug> <http://www.w3.org/2002/07/owl#equivalentClass> <http://localhost:8080/Pharmacology#Medicine> .
+<http://localhost:8080/Pharmacology#Drug> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug or Medicine For example Crossine"@en .
+<http://localhost:8080/Pharmacology#Drug> <http://www.w3.org/2000/01/rdf-schema#label> "Drug"@en .
+# 
+# http://localhost:8080/Pharmacology#DrugManufacurer
+<http://localhost:8080/Pharmacology#DrugManufacurer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#DrugManufacurer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#DrugManufacurer> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug manufacturer means company name or brand name"@en .
+<http://localhost:8080/Pharmacology#DrugManufacurer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> ""@en .
+<http://localhost:8080/Pharmacology#DrugManufacurer> <http://www.w3.org/2000/01/rdf-schema#label> "DrugManufacturer"@en .
+# 
+# http://localhost:8080/Pharmacology#DrugType
+<http://localhost:8080/Pharmacology#DrugType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#DrugType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#DrugType> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug Type or category like generic drug"@en .
+<http://localhost:8080/Pharmacology#DrugType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "DrugType"@en .
+# 
+# http://localhost:8080/Pharmacology#Medicine
+<http://localhost:8080/Pharmacology#Medicine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Medicine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Medicine or Drug like DIO1"@en .
+<http://localhost:8080/Pharmacology#Medicine> <http://www.w3.org/2000/01/rdf-schema#label> "Medicine"@en .
+# 
+# http://localhost:8080/Pharmacology#Symptom
+<http://localhost:8080/Pharmacology#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://localhost:8080/Pharmacology#Symptom> <http://www.w3.org/2000/01/rdf-schema#comment> "Symptom like cold, fever, cough and many more."@en .
+<http://localhost:8080/Pharmacology#Symptom> <http://www.w3.org/2000/01/rdf-schema#label> "Symptom"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://localhost:8080/Pharmacology#DM1
+<http://localhost:8080/Pharmacology#DM1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#DM1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#DM1> <http://localhost:8080/Pharmacology#ManufacturerId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#DM1> <http://localhost:8080/Pharmacology#ManufacturerName> "Zydus" .
+# 
+# http://localhost:8080/Pharmacology#DM2
+<http://localhost:8080/Pharmacology#DM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#DM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#DM2> <http://localhost:8080/Pharmacology#ManufacturerId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#DM2> <http://localhost:8080/Pharmacology#ManufacturerName> "Sun Pharma" .
+# 
+# http://localhost:8080/Pharmacology#DM3
+<http://localhost:8080/Pharmacology#DM3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#DM3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#DM3> <http://localhost:8080/Pharmacology#ManufacturerId> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#DM3> <http://localhost:8080/Pharmacology#ManufacturerName> "Mankind" .
+# 
+# http://localhost:8080/Pharmacology#DM4
+<http://localhost:8080/Pharmacology#DM4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#DM4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#DrugManufacurer> .
+<http://localhost:8080/Pharmacology#DM4> <http://localhost:8080/Pharmacology#ManufacturerId> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#DM4> <http://localhost:8080/Pharmacology#ManufacturerName> "Alkon" .
+# 
+# http://localhost:8080/Pharmacology#DM5
+<http://localhost:8080/Pharmacology#DM5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://localhost:8080/Pharmacology#Disease1
+<http://localhost:8080/Pharmacology#Disease1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Disease1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#Disease1> <http://localhost:8080/Pharmacology#IsDiagnosedBy> <http://localhost:8080/Pharmacology#Symptom2> .
+<http://localhost:8080/Pharmacology#Disease1> <http://localhost:8080/Pharmacology#DieseaseId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Disease1> <http://localhost:8080/Pharmacology#DiseaseLatinName> "Tuberculosis" .
+<http://localhost:8080/Pharmacology#Disease1> <http://localhost:8080/Pharmacology#DiseaseShortName> "TB" .
+# 
+# http://localhost:8080/Pharmacology#Disease2
+<http://localhost:8080/Pharmacology#Disease2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Disease2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#Disease2> <http://localhost:8080/Pharmacology#IsDiagnosedBy> <http://localhost:8080/Pharmacology#Symptom3> .
+<http://localhost:8080/Pharmacology#Disease2> <http://localhost:8080/Pharmacology#DieseaseId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Disease2> <http://localhost:8080/Pharmacology#DiseaseLatinName> "Hyper Tension" .
+<http://localhost:8080/Pharmacology#Disease2> <http://localhost:8080/Pharmacology#DiseaseShortName> "HT" .
+# 
+# http://localhost:8080/Pharmacology#Disease3
+<http://localhost:8080/Pharmacology#Disease3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Disease3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#Disease3> <http://localhost:8080/Pharmacology#IsDiagnosedBy> <http://localhost:8080/Pharmacology#Symptom3> .
+<http://localhost:8080/Pharmacology#Disease3> <http://localhost:8080/Pharmacology#DieseaseId> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Disease3> <http://localhost:8080/Pharmacology#DiseaseLatinName> "Diabetis Melitus" .
+<http://localhost:8080/Pharmacology#Disease3> <http://localhost:8080/Pharmacology#DiseaseShortName> "DM" .
+# 
+# http://localhost:8080/Pharmacology#Disease4
+<http://localhost:8080/Pharmacology#Disease4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Disease4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Disease> .
+<http://localhost:8080/Pharmacology#Disease4> <http://localhost:8080/Pharmacology#IsDiagnosedBy> <http://localhost:8080/Pharmacology#Symptom1> .
+<http://localhost:8080/Pharmacology#Disease4> <http://localhost:8080/Pharmacology#DieseaseId> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Disease4> <http://localhost:8080/Pharmacology#DiseaseLatinName> "Tyfoid" .
+<http://localhost:8080/Pharmacology#Disease4> <http://localhost:8080/Pharmacology#DiseaseShortName> "TY" .
+# 
+# http://localhost:8080/Pharmacology#Disease5
+<http://localhost:8080/Pharmacology#Disease5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://localhost:8080/Pharmacology#Dose1
+<http://localhost:8080/Pharmacology#Dose1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Dose1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Dose> .
+<http://localhost:8080/Pharmacology#Dose1> <http://localhost:8080/Pharmacology#DoseId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Dose1> <http://localhost:8080/Pharmacology#DoseShortName> "ml" .
+# 
+# http://localhost:8080/Pharmacology#Dose2
+<http://localhost:8080/Pharmacology#Dose2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Dose2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Dose> .
+<http://localhost:8080/Pharmacology#Dose2> <http://localhost:8080/Pharmacology#DoseId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Dose2> <http://localhost:8080/Pharmacology#DoseShortName> "mg" .
+# 
+# http://localhost:8080/Pharmacology#Dose3
+<http://localhost:8080/Pharmacology#Dose3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://localhost:8080/Pharmacology#Drug1
+<http://localhost:8080/Pharmacology#Drug1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Drug1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Drug1> <http://localhost:8080/Pharmacology#DrugId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Drug1> <http://localhost:8080/Pharmacology#DrugName> "Paracetamol" .
+# 
+# http://localhost:8080/Pharmacology#Drug2
+<http://localhost:8080/Pharmacology#Drug2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Drug2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Drug2> <http://localhost:8080/Pharmacology#DrugId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Drug2> <http://localhost:8080/Pharmacology#DrugName> "Cetrizine" .
+# 
+# http://localhost:8080/Pharmacology#Drug3
+<http://localhost:8080/Pharmacology#Drug3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Drug3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Drug3> <http://localhost:8080/Pharmacology#DrugId> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Drug3> <http://localhost:8080/Pharmacology#DrugName> "Leon" .
+# 
+# http://localhost:8080/Pharmacology#Drug4
+<http://localhost:8080/Pharmacology#Drug4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Drug4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Drug> .
+<http://localhost:8080/Pharmacology#Drug4> <http://localhost:8080/Pharmacology#DrugId> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Drug4> <http://localhost:8080/Pharmacology#DrugName> "Akilos-p" .
+# 
+# http://localhost:8080/Pharmacology#Drug5
+<http://localhost:8080/Pharmacology#Drug5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://localhost:8080/Pharmacology#Medicine1
+<http://localhost:8080/Pharmacology#Medicine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Medicine1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Medicine> .
+<http://localhost:8080/Pharmacology#Medicine1> <http://localhost:8080/Pharmacology#DrugId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Medicine1> <http://localhost:8080/Pharmacology#DrugName> "Dio1" .
+# 
+# http://localhost:8080/Pharmacology#Medicine2
+<http://localhost:8080/Pharmacology#Medicine2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://localhost:8080/Pharmacology#Symptom1
+<http://localhost:8080/Pharmacology#Symptom1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Symptom1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#Symptom1> <http://localhost:8080/Pharmacology#SymptomId> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Symptom1> <http://localhost:8080/Pharmacology#SymptomName> "Fever" .
+# 
+# http://localhost:8080/Pharmacology#Symptom2
+<http://localhost:8080/Pharmacology#Symptom2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Symptom2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#Symptom2> <http://localhost:8080/Pharmacology#SymptomId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Symptom2> <http://localhost:8080/Pharmacology#SymptomName> "Coughing" .
+# 
+# http://localhost:8080/Pharmacology#Symptom3
+<http://localhost:8080/Pharmacology#Symptom3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://localhost:8080/Pharmacology#Symptom3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8080/Pharmacology#Symptom> .
+<http://localhost:8080/Pharmacology#Symptom3> <http://localhost:8080/Pharmacology#SymptomId> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8080/Pharmacology#Symptom3> <http://localhost:8080/Pharmacology#SymptomName> "Headache" .
+# 
+# http://localhost:8080/Pharmacology#Symptom4
+<http://localhost:8080/Pharmacology#Symptom4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
