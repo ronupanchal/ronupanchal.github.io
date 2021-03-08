@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>...::Dr. Ronak Panchal::...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="Shortcut icon" href="images/favicon.ico"/> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="https://www.facebook.com/ronak.k.panchal" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>  
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/in/ronak-panchal-phd/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <!--<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>-->
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-phone"></i> +91 9898257016</a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-envelope"></i> dr.ronak.k.panchal@gmail.com</a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header style="background-image:url('images/hbg1.jpg')" -->
+  <div class="w3-container w3-center w3-padding-48" style="background-image:url('images/hbg1.jpg');">
+    
+    <h1 class="w3-xxxlarge"><b>Dr. Ronak Panchal</b></h1>
+    <h6>Welcome to <span class="w3-tag">Coding and Research World</span></h6>
+	
+  </div>
+
+ <!-- Navbar -->
+<div class="w3-row w3-padding w3-border">
+ <div class="w3-center">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="about_company.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Me</a>
+  <a href="our_clients.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Education</a>
+  <a href="catelogue.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Experience</a>  
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Publication <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      
+      <a href="productlist.php" class="w3-bar-item w3-button">Book</a>
+	  <a href="productlist.php" class="w3-bar-item w3-button">Research</a>
+      <a href="#" class="w3-bar-item w3-button">Academic Services</a>
+    </div>
+	</div>
+	<a href="pdf/RESUME_RONAKKUMAR_KANTILAL_PANCHAL.pdf" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Resume</a>	
+    <a href="events.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Events</a>	
+    <a href="contactus.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>	
+  
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="about_company.php" class="w3-bar-item w3-button">About Me</a>
+    <a href="our_clients.php" class="w3-bar-item w3-button">Education</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Research</a>
+    <a href="facilities.php" class="w3-bar-item w3-button">Facilities</a>
+    <a href="productlist.php" class="w3-bar-item w3-button">Product</a>
+	<a href="events.php" class="w3-bar-item w3-button">Events</a>
+    <a href="contactus.php" class="w3-bar-item w3-button">Contact Us</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div><style>
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000;
+  background:rgba(255,255,255,0.5);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col">
+    
+      
+       <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Education</h3>
+          <!--<h5>Title description, <span class="w3-opacity">April 7, 2016</span></h5>-->
+        </div>
+
+        <div class="w3-justify">
+          
+           <ul>
+		    <li>PhD in Computer Science, Sabarmati University, Ahmedabad</li>
+			<li>Certification in Data Science (ML,NLP,DL), EdWisor, Delhi</li>
+			<li>Post Graduate Diploma in Research Methodology, VNSGU, Surat</li>
+			<li>M.Sc. in Information and Communication Technology, VNSGU, Surat</li>
+			<li>B.Sc. in Computer Science, GSCV, VNSGU, Surat</li>
+		   </ul>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                <p>That was a great runway show! Thanks for everything.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                <p>Cant wait for the runway to start!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l2">
+      
+
+     
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+<!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h3><b>RECENT ACHIEVEMENT</b></h3> 
+	<marquee ><div class="w3-row">
+	<div class="w3-third">
+  <p>BEST RESEARCH PAPER AWARD</p>  
+  <!--<img src="../upload/products/0Chipper-min.jpg" height="150" width="150" class="w3-border w3-padding" alt="Products"> -->
+</div>
+
+<div class="w3-third">
+  <p>YOUNG RESEARCHER AWARD</p>  
+  <!--<img src="../upload/products/0Thickner-min.jpg" height="150" width="150" class="w3-border w3-padding" alt="Products"> -->
+</div>
+
+<div class="w3-third">
+  <p>QC in NPTEL</p>  
+  <!--<img src="../upload/products/0Headbox-min.jpg" height="150" width="150" class="w3-border w3-padding" alt="Products"> -->
+</div>
+
+</div></marquee>
+  </header>
+<div class="w3-row w3-border">
+<div class="w3-third w3-container">
+  <h2>Contact Us</h2>  
+  <p>ADDRESS: ,<br>At & Po: Baben, Bardoli,<br>Dist - Surat, Gujarat. [INDIA] - 394601</p>
+  <p>Mob: +91 9898257016 [Ronak Panchal]</p>
+  <p>Email ID: dr.ronak.k.panchal@gmail.com</p>
+  
+</div>
+<div class="w3-third w3-container">
+  <h2>Links</h2>
+  <p><a href="#">See Blog</a></p>
+  <p><a href="#" target="_blank">On Facebook</a></p>
+  <p><a href="#" target="_blank">On LinkedIn</a></p>
+</div>
+<div class="w3-third w3-container">
+  <h2>Location</h2>
+  <div class="map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29772.540513641565!2d73.10382815!3d21.129799799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0676962062319%3A0x42a65da81e176ab3!2sBardoli%2C+Gujarat!5e0!3m2!1sen!2sin!4v1441190264317" width="250" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  
+      </div>
+  
+       
+       <div style="width: 100%"></div><br />
+
+</div>
+<!--<div>
+<a href="https://india.paperex-expo.com/Home" target="_blank"><img src="images/Panchal _EmailSignature1.jpg" height="200" width="100%" class="w3-border w3-padding" alt="Products"></img></a>
+</div>-->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Developed By <a href="https://drronakpanchal.wordpress.com" target="_blank">Ronak Panchal</a></p>
+  
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+}
+</script>
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(21.1253338, 73.1086546),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</body>
+</html>
