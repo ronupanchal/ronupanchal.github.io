@@ -1,0 +1,1355 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.ronuphdswaishe.org/" ],
+    "iri" : "http://www.ronuphdswaishe.org/"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "87",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.ronuphdswaishe.org/#Country",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "subClasses" : [ "1" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "intersection" : [ "23", "10" ],
+    "attributes" : [ "anonymous", "intersection" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#StatutoryBody",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatutoryBody"
+    },
+    "subClasses" : [ "54" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Management",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Management"
+    },
+    "id" : "57"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "39",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Area",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Area"
+    },
+    "id" : "75"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#University",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "University"
+    },
+    "subClasses" : [ "10" ],
+    "id" : "54",
+    "superClasses" : [ "53" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#District",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "District",
+      "undefined" : "District"
+    },
+    "subClasses" : [ "47" ],
+    "id" : "7",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#UnderGraduation",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnderGraduation"
+    },
+    "id" : "44",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Course",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Course"
+    },
+    "subClasses" : [ "44", "52" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Taluka",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Taluka",
+      "undefined" : "Taluka"
+    },
+    "subClasses" : [ "46", "97", "98" ],
+    "id" : "47",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Village",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Village"
+    },
+    "id" : "97",
+    "superClasses" : [ "47" ]
+  }, {
+    "instances" : 0,
+    "intersection" : [ "44", "52" ],
+    "attributes" : [ "anonymous", "intersection" ],
+    "id" : "101"
+  }, {
+    "instances" : 0,
+    "intersection" : [ "54", "53", "10" ],
+    "attributes" : [ "anonymous", "intersection" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "110",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#PostGraduation",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostGraduation"
+    },
+    "id" : "52",
+    "superClasses" : [ "23" ]
+  }, {
+    "instances" : 0,
+    "intersection" : [ "54", "10" ],
+    "attributes" : [ "anonymous", "intersection" ],
+    "id" : "4"
+  }, {
+    "instances" : 0,
+    "intersection" : [ "0", "46", "7", "75", "1", "98", "47" ],
+    "attributes" : [ "anonymous", "intersection" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Street",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Street",
+      "undefined" : "Street"
+    },
+    "id" : "98",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#PostalCode",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostalCode",
+      "undefined" : "PostalCode"
+    },
+    "id" : "46",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#Institution",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Institution"
+    },
+    "id" : "10",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#State",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "State",
+      "undefined" : "State"
+    },
+    "subClasses" : [ "7" ],
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.ronuphdswaishe.org/#isLocatedIn",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isLocatedIn"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfDistrict",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "codeOfDistrict"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfNodalofficer",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "nameOfNodalofficer"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#emailIdPrincipal",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "emailIdPrincipal"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#ncontactNo",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "ncontactNo"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#emailIdNodalOfficer",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "emailIdNodalOfficer"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#levelOfCourse",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "levelOfCourse"
+    },
+    "domain" : "22",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfPrincipal",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "nameOfPrincipal"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfCountry",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "codeOfCountry"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#typeOfInstitution",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "typeOfInstitution"
+    },
+    "domain" : "39",
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "range" : "23",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "47",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#preRequestingCourse",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "preRequestingCourse"
+    },
+    "domain" : "22",
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isTalukaOf",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isTalukaOf"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "range" : "23",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfUniversity",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "nameOfUniversity"
+    },
+    "domain" : "54",
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfStatutoryBody",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "nameOfStatutoryBody"
+    },
+    "domain" : "53",
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfCountry",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "nameOfCountry"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#typeOfManagement",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "typeOfManagement"
+    },
+    "domain" : "57",
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfState",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "nameOfState"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#courseIntake",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "courseIntake"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "range" : "53",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfCourse",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "nameOfCourse"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "range" : "7",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "54",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#typeOfUniversity",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "typeOfUniversity"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#courseFee",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "courseFee"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#designationOfNodal",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "designationOfNodal"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isAffiliatedTo",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "isAffiliatedTo"
+    },
+    "domain" : "10",
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#aishecodeOfInstitution",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "aishecodeOfInstitution"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfStatutoryBody",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "codeOfStatutoryBody"
+    },
+    "domain" : "53",
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#website",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "website"
+    },
+    "domain" : "87",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isDistrictOf",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isDistrictOf"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfInstitution",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "nameOfInstitution"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#yearOfAffiliation",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "yearOfAffiliation"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isApprovedIn",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "isApprovedIn"
+    },
+    "domain" : "54",
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfManagement",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "codeOfManagement"
+    },
+    "domain" : "57",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#yearOfEstablished",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "yearOfEstablished"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfInstitution",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "codeOfInstitution"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfState",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "codeOfState"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#gps_latituted",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "gps_latituted"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#gps_longitude",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "gps_longitude"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isTypeOf",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "isTypeOf"
+    },
+    "domain" : "101",
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "range" : "47",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "47",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "103"
+  }, {
+    "range" : "1",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfUniversity",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "codeOfUniversity"
+    },
+    "domain" : "54",
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isOffering",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "isOffering"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#pincode",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "pincode"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#codeOfCourse",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "110",
+    "label" : {
+      "IRI-based" : "codeOfCourse"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#typeOfArea",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "typeOfArea"
+    },
+    "domain" : "75",
+    "attributes" : [ "datatype" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#address1",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "address1"
+    },
+    "domain" : "87",
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#address2",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "address2"
+    },
+    "domain" : "87",
+    "attributes" : [ "datatype" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#isStateOf",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "isStateOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#telephoneOfNodal",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "telephoneOfNodal"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#pcontactNo",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "pcontactNo"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://www.ronuphdswaishe.org/#nameOfDistrict",
+    "baseIri" : "http://www.ronuphdswaishe.org/",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "nameOfDistrict"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "118"
+  } ]
+}

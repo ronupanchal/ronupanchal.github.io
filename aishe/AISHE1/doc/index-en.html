@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>AISHEOnto</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://www.ronuphdswaishe.org/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.ronuphdswaishe.org/","name":"AISHEOnto", "headline":"All India Survey on Higher Education (AISHE) since 2010-11. The survey covers all the Institutions in the country engaged in imparting of higher education. Data is being collected on several parameters such as teachers, student enrolment, programmes, examination results, education finance, infrastructure.", "datePublished":"01-02-2020", "author":[{"@type":"Person","name":"Dr. Ronak Panchal","url":"drronakpanchal.wordpress.com"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>AISHEOnto</h1>
+<h2>Release  01-02-2020</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="1.0">1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.ronuphdswaishe.org/">http://www.ronuphdswaishe.org/</a></dd>
+<dt>Authors:</dt>
+<dd><a href="drronakpanchal.wordpress.com">Dr. Ronak Panchal</a>, Vidyabharti Trust College of BCA, Bardoli</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>AISHE Ontology</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+All India Survey on Higher Education (AISHE) since 2010-11. The survey covers all the Institutions in the country engaged in imparting of higher education. Data is being collected on several parameters such as teachers, student enrolment, programmes, examination results, education finance, infrastructure.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>aishe</b></td><td>&lt;http://www.ronuphdswaishe.org/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>default namespace</b></td><td>&lt;http://www.ronuphdswaishe.org&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">All India Survey on Higher Education (AISHE): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#Area" title="http://www.ronuphdswaishe.org/#Area">
+         <span>area</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+   </li>
+   <li>
+      <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">
+         <span>course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+   </li>
+   <li>
+      <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">
+         <span>institution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Management" title="http://www.ronuphdswaishe.org/#Management">
+         <span>management</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PostGraduation" title="http://www.ronuphdswaishe.org/#PostGraduation">
+         <span>post graduation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PostalCode" title="http://www.ronuphdswaishe.org/#PostalCode">PostalCode</a>
+   </li>
+   <li>
+      <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+   </li>
+   <li>
+      <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">
+         <span>statutory body</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Street" title="http://www.ronuphdswaishe.org/#Street">Street</a>
+   </li>
+   <li>
+      <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+   </li>
+   <li>
+      <a href="#UnderGraduation" title="http://www.ronuphdswaishe.org/#UnderGraduation">
+         <span>under graduation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#University" title="http://www.ronuphdswaishe.org/#University">
+         <span>university</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Village" title="http://www.ronuphdswaishe.org/#Village">
+         <span>village</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#isAffiliatedTo" title="http://www.ronuphdswaishe.org/#isAffiliatedTo">
+         <span>is affiliated to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isApprovedIn" title="http://www.ronuphdswaishe.org/#isApprovedIn">
+         <span>is approved in</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isDistrictOf" title="http://www.ronuphdswaishe.org/#isDistrictOf">
+         <span>is district of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isLocatedIn" title="http://www.ronuphdswaishe.org/#isLocatedIn">
+         <span>is located in</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isOffering" title="http://www.ronuphdswaishe.org/#isOffering">
+         <span>is offering</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isStateOf" title="http://www.ronuphdswaishe.org/#isStateOf">
+         <span>is state of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isTalukaOf" title="http://www.ronuphdswaishe.org/#isTalukaOf">
+         <span>is taluka of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isTypeOf" title="http://www.ronuphdswaishe.org/#isTypeOf">
+         <span>is type of</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#address1" title="http://www.ronuphdswaishe.org/#address1">
+         <span>address1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#address2" title="http://www.ronuphdswaishe.org/#address2">
+         <span>address2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#aishecodeOfInstitution"
+         title="http://www.ronuphdswaishe.org/#aishecodeOfInstitution">
+         <span>aishecode of institution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfCountry" title="http://www.ronuphdswaishe.org/#codeOfCountry">
+         <span>code of country</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfCourse" title="http://www.ronuphdswaishe.org/#codeOfCourse">
+         <span>code of course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfDistrict" title="http://www.ronuphdswaishe.org/#codeOfDistrict">
+         <span>code of district</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfInstitution" title="http://www.ronuphdswaishe.org/#codeOfInstitution">
+         <span>code of institution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfManagement" title="http://www.ronuphdswaishe.org/#codeOfManagement">
+         <span>code of management</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfState" title="http://www.ronuphdswaishe.org/#codeOfState">
+         <span>code of state</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfStatutoryBody"
+         title="http://www.ronuphdswaishe.org/#codeOfStatutoryBody">
+         <span>code of statutory body</span>
+      </a>
+   </li>
+   <li>
+      <a href="#codeOfUniversity" title="http://www.ronuphdswaishe.org/#codeOfUniversity">
+         <span>code of university</span>
+      </a>
+   </li>
+   <li>
+      <a href="#courseFee" title="http://www.ronuphdswaishe.org/#courseFee">
+         <span>course fee</span>
+      </a>
+   </li>
+   <li>
+      <a href="#courseIntake" title="http://www.ronuphdswaishe.org/#courseIntake">
+         <span>course intake</span>
+      </a>
+   </li>
+   <li>
+      <a href="#designationOfNodal"
+         title="http://www.ronuphdswaishe.org/#designationOfNodal">
+         <span>designation of nodal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#emailIdNodalOfficer"
+         title="http://www.ronuphdswaishe.org/#emailIdNodalOfficer">
+         <span>email id nodal officer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#emailIdPrincipal" title="http://www.ronuphdswaishe.org/#emailIdPrincipal">
+         <span>email id principal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#gps_latituted" title="http://www.ronuphdswaishe.org/#gps_latituted">
+         <span>gps latituted</span>
+      </a>
+   </li>
+   <li>
+      <a href="#gps_longitude" title="http://www.ronuphdswaishe.org/#gps_longitude">
+         <span>gps longitude</span>
+      </a>
+   </li>
+   <li>
+      <a href="#levelOfCourse" title="http://www.ronuphdswaishe.org/#levelOfCourse">
+         <span>level of course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfCountry" title="http://www.ronuphdswaishe.org/#nameOfCountry">
+         <span>name of country</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfCourse" title="http://www.ronuphdswaishe.org/#nameOfCourse">
+         <span>name of course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfDistrict" title="http://www.ronuphdswaishe.org/#nameOfDistrict">
+         <span>name of district</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfInstitution" title="http://www.ronuphdswaishe.org/#nameOfInstitution">
+         <span>name of institution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfNodalofficer"
+         title="http://www.ronuphdswaishe.org/#nameOfNodalofficer">
+         <span>name of nodalofficer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfPrincipal" title="http://www.ronuphdswaishe.org/#nameOfPrincipal">
+         <span>name of principal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfState" title="http://www.ronuphdswaishe.org/#nameOfState">
+         <span>name of state</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfStatutoryBody"
+         title="http://www.ronuphdswaishe.org/#nameOfStatutoryBody">
+         <span>name of statutory body</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameOfUniversity" title="http://www.ronuphdswaishe.org/#nameOfUniversity">
+         <span>name of university</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ncontactNo" title="http://www.ronuphdswaishe.org/#ncontactNo">
+         <span>ncontact no</span>
+      </a>
+   </li>
+   <li>
+      <a href="#pcontactNo" title="http://www.ronuphdswaishe.org/#pcontactNo">
+         <span>pcontact no</span>
+      </a>
+   </li>
+   <li>
+      <a href="#pincode" title="http://www.ronuphdswaishe.org/#pincode">
+         <span>pincode</span>
+      </a>
+   </li>
+   <li>
+      <a href="#preRequestingCourse"
+         title="http://www.ronuphdswaishe.org/#preRequestingCourse">
+         <span>pre requesting course</span>
+      </a>
+   </li>
+   <li>
+      <a href="#telephoneOfNodal" title="http://www.ronuphdswaishe.org/#telephoneOfNodal">
+         <span>telephone of nodal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#typeOfArea" title="http://www.ronuphdswaishe.org/#typeOfArea">
+         <span>type of area</span>
+      </a>
+   </li>
+   <li>
+      <a href="#typeOfInstitution" title="http://www.ronuphdswaishe.org/#typeOfInstitution">
+         <span>type of institution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#typeOfManagement" title="http://www.ronuphdswaishe.org/#typeOfManagement">
+         <span>type of management</span>
+      </a>
+   </li>
+   <li>
+      <a href="#typeOfUniversity" title="http://www.ronuphdswaishe.org/#typeOfUniversity">
+         <span>type of university</span>
+      </a>
+   </li>
+   <li>
+      <a href="#website" title="http://www.ronuphdswaishe.org/#website">
+         <span>website</span>
+      </a>
+   </li>
+   <li>
+      <a href="#yearOfAffiliation" title="http://www.ronuphdswaishe.org/#yearOfAffiliation">
+         <span>year of affiliation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#yearOfEstablished" title="http://www.ronuphdswaishe.org/#yearOfEstablished">
+         <span>year of established</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">All India Survey on Higher Education (AISHE): Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for All India Survey on Higher Education (AISHE) classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by All India Survey on Higher Education (AISHE).
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Area" title="http://www.ronuphdswaishe.org/#Area">
+            <span>area</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+      </li>
+      <li>
+         <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">
+            <span>course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+      </li>
+      <li>
+         <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">
+            <span>institution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Management" title="http://www.ronuphdswaishe.org/#Management">
+            <span>management</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PostGraduation" title="http://www.ronuphdswaishe.org/#PostGraduation">
+            <span>post graduation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PostalCode" title="http://www.ronuphdswaishe.org/#PostalCode">PostalCode</a>
+      </li>
+      <li>
+         <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+      </li>
+      <li>
+         <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">
+            <span>statutory body</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Street" title="http://www.ronuphdswaishe.org/#Street">Street</a>
+      </li>
+      <li>
+         <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+      </li>
+      <li>
+         <a href="#UnderGraduation" title="http://www.ronuphdswaishe.org/#UnderGraduation">
+            <span>under graduation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#University" title="http://www.ronuphdswaishe.org/#University">
+            <span>university</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Village" title="http://www.ronuphdswaishe.org/#Village">
+            <span>village</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Area">
+      <h3>area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Area</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#typeOfArea" title="http://www.ronuphdswaishe.org/#typeOfArea">type of area</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Country">
+      <h3>Country<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Country</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfCountry" title="http://www.ronuphdswaishe.org/#codeOfCountry">code of country</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfCountry" title="http://www.ronuphdswaishe.org/#nameOfCountry">name of country</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isStateOf" title="http://www.ronuphdswaishe.org/#isStateOf">is state of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Course">
+      <h3>course<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Course</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PostGraduation" title="http://www.ronuphdswaishe.org/#PostGraduation">post graduation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#UnderGraduation" title="http://www.ronuphdswaishe.org/#UnderGraduation">under graduation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfCourse" title="http://www.ronuphdswaishe.org/#codeOfCourse">code of course</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#courseFee" title="http://www.ronuphdswaishe.org/#courseFee">course fee</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#courseIntake" title="http://www.ronuphdswaishe.org/#courseIntake">course intake</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfCourse" title="http://www.ronuphdswaishe.org/#nameOfCourse">name of course</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfDistrict" title="http://www.ronuphdswaishe.org/#nameOfDistrict">name of district</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isOffering" title="http://www.ronuphdswaishe.org/#isOffering">is offering</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isTypeOf" title="http://www.ronuphdswaishe.org/#isTypeOf">is type of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="District">
+      <h3>District<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#District</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfDistrict" title="http://www.ronuphdswaishe.org/#codeOfDistrict">code of district</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isDistrictOf" title="http://www.ronuphdswaishe.org/#isDistrictOf">is district of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isTalukaOf" title="http://www.ronuphdswaishe.org/#isTalukaOf">is taluka of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Institution">
+      <h3>institution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Institution</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#aishecodeOfInstitution"
+               title="http://www.ronuphdswaishe.org/#aishecodeOfInstitution">aishecode of institution</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#codeOfInstitution" title="http://www.ronuphdswaishe.org/#codeOfInstitution">code of institution</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#designationOfNodal"
+               title="http://www.ronuphdswaishe.org/#designationOfNodal">designation of nodal</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#emailIdNodalOfficer"
+               title="http://www.ronuphdswaishe.org/#emailIdNodalOfficer">email id nodal officer</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#emailIdPrincipal" title="http://www.ronuphdswaishe.org/#emailIdPrincipal">email id principal</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#gps_latituted" title="http://www.ronuphdswaishe.org/#gps_latituted">gps latituted</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#gps_longitude" title="http://www.ronuphdswaishe.org/#gps_longitude">gps longitude</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isAffiliatedTo" title="http://www.ronuphdswaishe.org/#isAffiliatedTo">is affiliated to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nameOfInstitution" title="http://www.ronuphdswaishe.org/#nameOfInstitution">name of institution</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfNodalofficer"
+               title="http://www.ronuphdswaishe.org/#nameOfNodalofficer">name of nodalofficer</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfPrincipal" title="http://www.ronuphdswaishe.org/#nameOfPrincipal">name of principal</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ncontactNo" title="http://www.ronuphdswaishe.org/#ncontactNo">ncontact no</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#pcontactNo" title="http://www.ronuphdswaishe.org/#pcontactNo">pcontact no</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#pincode" title="http://www.ronuphdswaishe.org/#pincode">pincode</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#telephoneOfNodal" title="http://www.ronuphdswaishe.org/#telephoneOfNodal">telephone of nodal</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#typeOfUniversity" title="http://www.ronuphdswaishe.org/#typeOfUniversity">type of university</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#yearOfAffiliation" title="http://www.ronuphdswaishe.org/#yearOfAffiliation">year of affiliation</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#yearOfEstablished" title="http://www.ronuphdswaishe.org/#yearOfEstablished">year of established</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Management">
+      <h3>management<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Management</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfManagement" title="http://www.ronuphdswaishe.org/#codeOfManagement">code of management</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#typeOfManagement" title="http://www.ronuphdswaishe.org/#typeOfManagement">type of management</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PostGraduation">
+      <h3>post graduation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#PostGraduation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PostalCode">
+      <h3>PostalCode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#PostalCode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="State">
+      <h3>State<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#State</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfState" title="http://www.ronuphdswaishe.org/#codeOfState">code of state</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isStateOf" title="http://www.ronuphdswaishe.org/#isStateOf">is state of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nameOfState" title="http://www.ronuphdswaishe.org/#nameOfState">name of state</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isDistrictOf" title="http://www.ronuphdswaishe.org/#isDistrictOf">is district of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StatutoryBody">
+      <h3>statutory body<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#StatutoryBody</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfStatutoryBody"
+               title="http://www.ronuphdswaishe.org/#codeOfStatutoryBody">code of statutory body</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#nameOfStatutoryBody"
+               title="http://www.ronuphdswaishe.org/#nameOfStatutoryBody">name of statutory body</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isApprovedIn" title="http://www.ronuphdswaishe.org/#isApprovedIn">is approved in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Street">
+      <h3>Street<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Street</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Taluka">
+      <h3>Taluka<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Taluka</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PostalCode" title="http://www.ronuphdswaishe.org/#PostalCode">PostalCode</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Street" title="http://www.ronuphdswaishe.org/#Street">Street</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Village" title="http://www.ronuphdswaishe.org/#Village">village</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isTalukaOf" title="http://www.ronuphdswaishe.org/#isTalukaOf">is taluka of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UnderGraduation">
+      <h3>under graduation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#UnderGraduation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="University">
+      <h3>university<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#University</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#codeOfUniversity" title="http://www.ronuphdswaishe.org/#codeOfUniversity">code of university</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isApprovedIn" title="http://www.ronuphdswaishe.org/#isApprovedIn">is approved in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nameOfUniversity" title="http://www.ronuphdswaishe.org/#nameOfUniversity">name of university</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isAffiliatedTo" title="http://www.ronuphdswaishe.org/#isAffiliatedTo">is affiliated to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Village">
+      <h3>village<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#Village</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#isAffiliatedTo" title="http://www.ronuphdswaishe.org/#isAffiliatedTo">
+            <span>is affiliated to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isApprovedIn" title="http://www.ronuphdswaishe.org/#isApprovedIn">
+            <span>is approved in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isDistrictOf" title="http://www.ronuphdswaishe.org/#isDistrictOf">
+            <span>is district of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isLocatedIn" title="http://www.ronuphdswaishe.org/#isLocatedIn">
+            <span>is located in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isOffering" title="http://www.ronuphdswaishe.org/#isOffering">
+            <span>is offering</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isStateOf" title="http://www.ronuphdswaishe.org/#isStateOf">
+            <span>is state of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isTalukaOf" title="http://www.ronuphdswaishe.org/#isTalukaOf">
+            <span>is taluka of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isTypeOf" title="http://www.ronuphdswaishe.org/#isTypeOf">
+            <span>is type of</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="isAffiliatedTo">
+      <h3>is affiliated to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isAffiliatedTo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isApprovedIn">
+      <h3>is approved in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isApprovedIn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isDistrictOf">
+      <h3>is district of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isDistrictOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isLocatedIn">
+      <h3>is located in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isLocatedIn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Area" title="http://www.ronuphdswaishe.org/#Area">area</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#PostalCode" title="http://www.ronuphdswaishe.org/#PostalCode">PostalCode</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#Street" title="http://www.ronuphdswaishe.org/#Street">Street</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isOffering">
+      <h3>is offering<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isOffering</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isStateOf">
+      <h3>is state of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isStateOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isTalukaOf">
+      <h3>is taluka of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isTalukaOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Taluka" title="http://www.ronuphdswaishe.org/#Taluka">Taluka</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isTypeOf">
+      <h3>is type of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#isTypeOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PostGraduation" title="http://www.ronuphdswaishe.org/#PostGraduation">post graduation</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#UnderGraduation" title="http://www.ronuphdswaishe.org/#UnderGraduation">under graduation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#address1" title="http://www.ronuphdswaishe.org/#address1">
+            <span>address1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#address2" title="http://www.ronuphdswaishe.org/#address2">
+            <span>address2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#aishecodeOfInstitution"
+            title="http://www.ronuphdswaishe.org/#aishecodeOfInstitution">
+            <span>aishecode of institution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfCountry" title="http://www.ronuphdswaishe.org/#codeOfCountry">
+            <span>code of country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfCourse" title="http://www.ronuphdswaishe.org/#codeOfCourse">
+            <span>code of course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfDistrict" title="http://www.ronuphdswaishe.org/#codeOfDistrict">
+            <span>code of district</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfInstitution" title="http://www.ronuphdswaishe.org/#codeOfInstitution">
+            <span>code of institution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfManagement" title="http://www.ronuphdswaishe.org/#codeOfManagement">
+            <span>code of management</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfState" title="http://www.ronuphdswaishe.org/#codeOfState">
+            <span>code of state</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfStatutoryBody"
+            title="http://www.ronuphdswaishe.org/#codeOfStatutoryBody">
+            <span>code of statutory body</span>
+         </a>
+      </li>
+      <li>
+         <a href="#codeOfUniversity" title="http://www.ronuphdswaishe.org/#codeOfUniversity">
+            <span>code of university</span>
+         </a>
+      </li>
+      <li>
+         <a href="#courseFee" title="http://www.ronuphdswaishe.org/#courseFee">
+            <span>course fee</span>
+         </a>
+      </li>
+      <li>
+         <a href="#courseIntake" title="http://www.ronuphdswaishe.org/#courseIntake">
+            <span>course intake</span>
+         </a>
+      </li>
+      <li>
+         <a href="#designationOfNodal"
+            title="http://www.ronuphdswaishe.org/#designationOfNodal">
+            <span>designation of nodal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#emailIdNodalOfficer"
+            title="http://www.ronuphdswaishe.org/#emailIdNodalOfficer">
+            <span>email id nodal officer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#emailIdPrincipal" title="http://www.ronuphdswaishe.org/#emailIdPrincipal">
+            <span>email id principal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#gps_latituted" title="http://www.ronuphdswaishe.org/#gps_latituted">
+            <span>gps latituted</span>
+         </a>
+      </li>
+      <li>
+         <a href="#gps_longitude" title="http://www.ronuphdswaishe.org/#gps_longitude">
+            <span>gps longitude</span>
+         </a>
+      </li>
+      <li>
+         <a href="#levelOfCourse" title="http://www.ronuphdswaishe.org/#levelOfCourse">
+            <span>level of course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfCountry" title="http://www.ronuphdswaishe.org/#nameOfCountry">
+            <span>name of country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfCourse" title="http://www.ronuphdswaishe.org/#nameOfCourse">
+            <span>name of course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfDistrict" title="http://www.ronuphdswaishe.org/#nameOfDistrict">
+            <span>name of district</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfInstitution" title="http://www.ronuphdswaishe.org/#nameOfInstitution">
+            <span>name of institution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfNodalofficer"
+            title="http://www.ronuphdswaishe.org/#nameOfNodalofficer">
+            <span>name of nodalofficer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfPrincipal" title="http://www.ronuphdswaishe.org/#nameOfPrincipal">
+            <span>name of principal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfState" title="http://www.ronuphdswaishe.org/#nameOfState">
+            <span>name of state</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfStatutoryBody"
+            title="http://www.ronuphdswaishe.org/#nameOfStatutoryBody">
+            <span>name of statutory body</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nameOfUniversity" title="http://www.ronuphdswaishe.org/#nameOfUniversity">
+            <span>name of university</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ncontactNo" title="http://www.ronuphdswaishe.org/#ncontactNo">
+            <span>ncontact no</span>
+         </a>
+      </li>
+      <li>
+         <a href="#pcontactNo" title="http://www.ronuphdswaishe.org/#pcontactNo">
+            <span>pcontact no</span>
+         </a>
+      </li>
+      <li>
+         <a href="#pincode" title="http://www.ronuphdswaishe.org/#pincode">
+            <span>pincode</span>
+         </a>
+      </li>
+      <li>
+         <a href="#preRequestingCourse"
+            title="http://www.ronuphdswaishe.org/#preRequestingCourse">
+            <span>pre requesting course</span>
+         </a>
+      </li>
+      <li>
+         <a href="#telephoneOfNodal" title="http://www.ronuphdswaishe.org/#telephoneOfNodal">
+            <span>telephone of nodal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#typeOfArea" title="http://www.ronuphdswaishe.org/#typeOfArea">
+            <span>type of area</span>
+         </a>
+      </li>
+      <li>
+         <a href="#typeOfInstitution" title="http://www.ronuphdswaishe.org/#typeOfInstitution">
+            <span>type of institution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#typeOfManagement" title="http://www.ronuphdswaishe.org/#typeOfManagement">
+            <span>type of management</span>
+         </a>
+      </li>
+      <li>
+         <a href="#typeOfUniversity" title="http://www.ronuphdswaishe.org/#typeOfUniversity">
+            <span>type of university</span>
+         </a>
+      </li>
+      <li>
+         <a href="#website" title="http://www.ronuphdswaishe.org/#website">
+            <span>website</span>
+         </a>
+      </li>
+      <li>
+         <a href="#yearOfAffiliation" title="http://www.ronuphdswaishe.org/#yearOfAffiliation">
+            <span>year of affiliation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#yearOfEstablished" title="http://www.ronuphdswaishe.org/#yearOfEstablished">
+            <span>year of established</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="address1">
+      <h3>address1<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#address1</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="address2">
+      <h3>address2<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#address2</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="aishecodeOfInstitution">
+      <h3>aishecode of institution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#aishecodeOfInstitution</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfCountry">
+      <h3>code of country<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfCountry</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfCourse">
+      <h3>code of course<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfCourse</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfDistrict">
+      <h3>code of district<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfDistrict</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#District" title="http://www.ronuphdswaishe.org/#District">District</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfInstitution">
+      <h3>code of institution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfInstitution</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfManagement">
+      <h3>code of management<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfManagement</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Management" title="http://www.ronuphdswaishe.org/#Management">management</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfState">
+      <h3>code of state<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfState</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfStatutoryBody">
+      <h3>code of statutory body<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfStatutoryBody</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="codeOfUniversity">
+      <h3>code of university<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#codeOfUniversity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="courseFee">
+      <h3>course fee<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#courseFee</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="courseIntake">
+      <h3>course intake<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#courseIntake</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="designationOfNodal">
+      <h3>designation of nodal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#designationOfNodal</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="emailIdNodalOfficer">
+      <h3>email id nodal officer<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#emailIdNodalOfficer</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="emailIdPrincipal">
+      <h3>email id principal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#emailIdPrincipal</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="gps_latituted">
+      <h3>gps latituted<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#gps_latituted</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="gps_longitude">
+      <h3>gps longitude<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#gps_longitude</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="levelOfCourse">
+      <h3>level of course<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#levelOfCourse</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfCountry">
+      <h3>name of country<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfCountry</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Country" title="http://www.ronuphdswaishe.org/#Country">Country</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfCourse">
+      <h3>name of course<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfCourse</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfDistrict">
+      <h3>name of district<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfDistrict</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfInstitution">
+      <h3>name of institution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfInstitution</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfNodalofficer">
+      <h3>name of nodalofficer<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfNodalofficer</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfPrincipal">
+      <h3>name of principal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfPrincipal</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfState">
+      <h3>name of state<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfState</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#State" title="http://www.ronuphdswaishe.org/#State">State</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfStatutoryBody">
+      <h3>name of statutory body<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfStatutoryBody</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nameOfUniversity">
+      <h3>name of university<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#nameOfUniversity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ncontactNo">
+      <h3>ncontact no<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#ncontactNo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pcontactNo">
+      <h3>pcontact no<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#pcontactNo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pincode">
+      <h3>pincode<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#pincode</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="preRequestingCourse">
+      <h3>pre requesting course<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#preRequestingCourse</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Course" title="http://www.ronuphdswaishe.org/#Course">course</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="telephoneOfNodal">
+      <h3>telephone of nodal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#telephoneOfNodal</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="typeOfArea">
+      <h3>type of area<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#typeOfArea</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Area" title="http://www.ronuphdswaishe.org/#Area">area</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="typeOfInstitution">
+      <h3>type of institution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#typeOfInstitution</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="typeOfManagement">
+      <h3>type of management<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#typeOfManagement</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Management" title="http://www.ronuphdswaishe.org/#Management">management</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="typeOfUniversity">
+      <h3>type of university<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#typeOfUniversity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="website">
+      <h3>website<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#website</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#StatutoryBody" title="http://www.ronuphdswaishe.org/#StatutoryBody">statutory body</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> 
+               <a href="#University" title="http://www.ronuphdswaishe.org/#University">university</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="yearOfAffiliation">
+      <h3>year of affiliation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#yearOfAffiliation</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="yearOfEstablished">
+      <h3>year of established<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.ronuphdswaishe.org/#yearOfEstablished</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Institution" title="http://www.ronuphdswaishe.org/#Institution">institution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

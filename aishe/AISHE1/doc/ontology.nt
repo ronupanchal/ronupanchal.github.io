@@ -1,0 +1,433 @@
+<http://www.ronuphdswaishe.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ronuphdswaishe.org/#isAffiliatedTo
+<http://www.ronuphdswaishe.org/#isAffiliatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isAffiliatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#isAffiliatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#University> .
+# 
+# http://www.ronuphdswaishe.org/#isApprovedIn
+<http://www.ronuphdswaishe.org/#isApprovedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isApprovedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#University> .
+<http://www.ronuphdswaishe.org/#isApprovedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+# 
+# http://www.ronuphdswaishe.org/#isDistrictOf
+<http://www.ronuphdswaishe.org/#isDistrictOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isDistrictOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#District> .
+<http://www.ronuphdswaishe.org/#isDistrictOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#State> .
+# 
+# http://www.ronuphdswaishe.org/#isLocatedIn
+<http://www.ronuphdswaishe.org/#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#University> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Area> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Country> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#District> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#PostalCode> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#State> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Street> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Taluka> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ronuphdswaishe.org/#isOffering
+<http://www.ronuphdswaishe.org/#isOffering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isOffering> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#University> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#isOffering> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#Course> .
+# 
+# http://www.ronuphdswaishe.org/#isStateOf
+<http://www.ronuphdswaishe.org/#isStateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isStateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#State> .
+<http://www.ronuphdswaishe.org/#isStateOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#Country> .
+# 
+# http://www.ronuphdswaishe.org/#isTalukaOf
+<http://www.ronuphdswaishe.org/#isTalukaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isTalukaOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Taluka> .
+<http://www.ronuphdswaishe.org/#isTalukaOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#District> .
+# 
+# http://www.ronuphdswaishe.org/#isTypeOf
+<http://www.ronuphdswaishe.org/#isTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ronuphdswaishe.org/#isTypeOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#PostGraduation> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#UnderGraduation> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#isTypeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ronuphdswaishe.org/#Course> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ronuphdswaishe.org/#address1
+<http://www.ronuphdswaishe.org/#address1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#address1> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#University> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#address1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#address2
+<http://www.ronuphdswaishe.org/#address2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#address2> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#University> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#address2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#aishecodeOfInstitution
+<http://www.ronuphdswaishe.org/#aishecodeOfInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#aishecodeOfInstitution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#aishecodeOfInstitution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfCountry
+<http://www.ronuphdswaishe.org/#codeOfCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Country> .
+<http://www.ronuphdswaishe.org/#codeOfCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfCourse
+<http://www.ronuphdswaishe.org/#codeOfCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfCourse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Course> .
+<http://www.ronuphdswaishe.org/#codeOfCourse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfDistrict
+<http://www.ronuphdswaishe.org/#codeOfDistrict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfDistrict> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#District> .
+<http://www.ronuphdswaishe.org/#codeOfDistrict> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfInstitution
+<http://www.ronuphdswaishe.org/#codeOfInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfInstitution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#codeOfInstitution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfManagement
+<http://www.ronuphdswaishe.org/#codeOfManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfManagement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Management> .
+<http://www.ronuphdswaishe.org/#codeOfManagement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfState
+<http://www.ronuphdswaishe.org/#codeOfState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#State> .
+<http://www.ronuphdswaishe.org/#codeOfState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfStatutoryBody
+<http://www.ronuphdswaishe.org/#codeOfStatutoryBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfStatutoryBody> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+<http://www.ronuphdswaishe.org/#codeOfStatutoryBody> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#codeOfUniversity
+<http://www.ronuphdswaishe.org/#codeOfUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#codeOfUniversity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#University> .
+<http://www.ronuphdswaishe.org/#codeOfUniversity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#courseFee
+<http://www.ronuphdswaishe.org/#courseFee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#courseFee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Course> .
+<http://www.ronuphdswaishe.org/#courseFee> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#courseIntake
+<http://www.ronuphdswaishe.org/#courseIntake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#courseIntake> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Course> .
+<http://www.ronuphdswaishe.org/#courseIntake> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#designationOfNodal
+<http://www.ronuphdswaishe.org/#designationOfNodal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#designationOfNodal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#designationOfNodal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#emailIdNodalOfficer
+<http://www.ronuphdswaishe.org/#emailIdNodalOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#emailIdNodalOfficer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#emailIdNodalOfficer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#emailIdPrincipal
+<http://www.ronuphdswaishe.org/#emailIdPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#emailIdPrincipal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#emailIdPrincipal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#gps_latituted
+<http://www.ronuphdswaishe.org/#gps_latituted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#gps_latituted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#gps_latituted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#gps_longitude
+<http://www.ronuphdswaishe.org/#gps_longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#gps_longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#gps_longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#levelOfCourse
+<http://www.ronuphdswaishe.org/#levelOfCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#levelOfCourse> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Course> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#levelOfCourse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfCountry
+<http://www.ronuphdswaishe.org/#nameOfCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Country> .
+<http://www.ronuphdswaishe.org/#nameOfCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfCourse
+<http://www.ronuphdswaishe.org/#nameOfCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfCourse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Course> .
+<http://www.ronuphdswaishe.org/#nameOfCourse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfDistrict
+<http://www.ronuphdswaishe.org/#nameOfDistrict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfDistrict> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Course> .
+<http://www.ronuphdswaishe.org/#nameOfDistrict> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfInstitution
+<http://www.ronuphdswaishe.org/#nameOfInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfInstitution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#nameOfInstitution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfNodalofficer
+<http://www.ronuphdswaishe.org/#nameOfNodalofficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfNodalofficer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#nameOfNodalofficer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfPrincipal
+<http://www.ronuphdswaishe.org/#nameOfPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfPrincipal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#nameOfPrincipal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfState
+<http://www.ronuphdswaishe.org/#nameOfState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#State> .
+<http://www.ronuphdswaishe.org/#nameOfState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfStatutoryBody
+<http://www.ronuphdswaishe.org/#nameOfStatutoryBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfStatutoryBody> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+<http://www.ronuphdswaishe.org/#nameOfStatutoryBody> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#nameOfUniversity
+<http://www.ronuphdswaishe.org/#nameOfUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#nameOfUniversity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#University> .
+<http://www.ronuphdswaishe.org/#nameOfUniversity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#ncontactNo
+<http://www.ronuphdswaishe.org/#ncontactNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#ncontactNo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#ncontactNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#pcontactNo
+<http://www.ronuphdswaishe.org/#pcontactNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#pcontactNo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#pcontactNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#pincode
+<http://www.ronuphdswaishe.org/#pincode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#pincode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#pincode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#preRequestingCourse
+<http://www.ronuphdswaishe.org/#preRequestingCourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#preRequestingCourse> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Course> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#preRequestingCourse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#telephoneOfNodal
+<http://www.ronuphdswaishe.org/#telephoneOfNodal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#telephoneOfNodal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#telephoneOfNodal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#typeOfArea
+<http://www.ronuphdswaishe.org/#typeOfArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#typeOfArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Area> .
+<http://www.ronuphdswaishe.org/#typeOfArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#typeOfInstitution
+<http://www.ronuphdswaishe.org/#typeOfInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#typeOfInstitution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.ronuphdswaishe.org/#typeOfManagement
+<http://www.ronuphdswaishe.org/#typeOfManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#typeOfManagement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Management> .
+<http://www.ronuphdswaishe.org/#typeOfManagement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#typeOfUniversity
+<http://www.ronuphdswaishe.org/#typeOfUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#typeOfUniversity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#typeOfUniversity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#website
+<http://www.ronuphdswaishe.org/#website> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#website> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#Institution> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ronuphdswaishe.org/#University> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#website> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.ronuphdswaishe.org/#yearOfAffiliation
+<http://www.ronuphdswaishe.org/#yearOfAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#yearOfAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#yearOfAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.ronuphdswaishe.org/#yearOfEstablished
+<http://www.ronuphdswaishe.org/#yearOfEstablished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ronuphdswaishe.org/#yearOfEstablished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ronuphdswaishe.org/#Institution> .
+<http://www.ronuphdswaishe.org/#yearOfEstablished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ronuphdswaishe.org/#Area
+<http://www.ronuphdswaishe.org/#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Area> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.ronuphdswaishe.org/#Country
+<http://www.ronuphdswaishe.org/#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.ronuphdswaishe.org/#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://www.ronuphdswaishe.org/#Course
+<http://www.ronuphdswaishe.org/#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.ronuphdswaishe.org/#District
+<http://www.ronuphdswaishe.org/#District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#State> .
+<http://www.ronuphdswaishe.org/#District> <http://www.w3.org/2000/01/rdf-schema#label> "District" .
+# 
+# http://www.ronuphdswaishe.org/#Institution
+<http://www.ronuphdswaishe.org/#Institution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Institution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#University> .
+# 
+# http://www.ronuphdswaishe.org/#Management
+<http://www.ronuphdswaishe.org/#Management> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Management> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.ronuphdswaishe.org/#PostGraduation
+<http://www.ronuphdswaishe.org/#PostGraduation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#PostGraduation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Course> .
+# 
+# http://www.ronuphdswaishe.org/#PostalCode
+<http://www.ronuphdswaishe.org/#PostalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#PostalCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Taluka> .
+<http://www.ronuphdswaishe.org/#PostalCode> <http://www.w3.org/2000/01/rdf-schema#label> "PostalCode" .
+# 
+# http://www.ronuphdswaishe.org/#State
+<http://www.ronuphdswaishe.org/#State> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#State> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Country> .
+<http://www.ronuphdswaishe.org/#State> <http://www.w3.org/2000/01/rdf-schema#label> "State" .
+# 
+# http://www.ronuphdswaishe.org/#StatutoryBody
+<http://www.ronuphdswaishe.org/#StatutoryBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#StatutoryBody> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.ronuphdswaishe.org/#Street
+<http://www.ronuphdswaishe.org/#Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Street> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Taluka> .
+<http://www.ronuphdswaishe.org/#Street> <http://www.w3.org/2000/01/rdf-schema#label> "Street" .
+# 
+# http://www.ronuphdswaishe.org/#Taluka
+<http://www.ronuphdswaishe.org/#Taluka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Taluka> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#District> .
+<http://www.ronuphdswaishe.org/#Taluka> <http://www.w3.org/2000/01/rdf-schema#label> "Taluka" .
+# 
+# http://www.ronuphdswaishe.org/#UnderGraduation
+<http://www.ronuphdswaishe.org/#UnderGraduation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#UnderGraduation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Course> .
+# 
+# http://www.ronuphdswaishe.org/#University
+<http://www.ronuphdswaishe.org/#University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#University> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#StatutoryBody> .
+# 
+# http://www.ronuphdswaishe.org/#Village
+<http://www.ronuphdswaishe.org/#Village> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ronuphdswaishe.org/#Village> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ronuphdswaishe.org/#Taluka> .
+# 
+# http://www.w3.org/2002/07/owl#Thing
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

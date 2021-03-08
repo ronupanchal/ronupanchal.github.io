@@ -1,0 +1,439 @@
+@prefix : <http://www.ronuphdswaishe.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ronuphdswaishe.org/> .
+
+<http://www.ronuphdswaishe.org/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ronuphdswaishe.org/#isAffiliatedTo
+<http://www.ronuphdswaishe.org/#isAffiliatedTo> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                rdfs:range <http://www.ronuphdswaishe.org/#University> .
+
+
+###  http://www.ronuphdswaishe.org/#isApprovedIn
+<http://www.ronuphdswaishe.org/#isApprovedIn> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.ronuphdswaishe.org/#University> ;
+                                              rdfs:range <http://www.ronuphdswaishe.org/#StatutoryBody> .
+
+
+###  http://www.ronuphdswaishe.org/#isDistrictOf
+<http://www.ronuphdswaishe.org/#isDistrictOf> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.ronuphdswaishe.org/#District> ;
+                                              rdfs:range <http://www.ronuphdswaishe.org/#State> .
+
+
+###  http://www.ronuphdswaishe.org/#isLocatedIn
+<http://www.ronuphdswaishe.org/#isLocatedIn> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Institution>
+                                                                                <http://www.ronuphdswaishe.org/#University>
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Area>
+                                                                               <http://www.ronuphdswaishe.org/#Country>
+                                                                               <http://www.ronuphdswaishe.org/#District>
+                                                                               <http://www.ronuphdswaishe.org/#PostalCode>
+                                                                               <http://www.ronuphdswaishe.org/#State>
+                                                                               <http://www.ronuphdswaishe.org/#Street>
+                                                                               <http://www.ronuphdswaishe.org/#Taluka>
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] .
+
+
+###  http://www.ronuphdswaishe.org/#isOffering
+<http://www.ronuphdswaishe.org/#isOffering> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Institution>
+                                                                               <http://www.ronuphdswaishe.org/#University>
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                            rdfs:range <http://www.ronuphdswaishe.org/#Course> .
+
+
+###  http://www.ronuphdswaishe.org/#isStateOf
+<http://www.ronuphdswaishe.org/#isStateOf> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.ronuphdswaishe.org/#State> ;
+                                           rdfs:range <http://www.ronuphdswaishe.org/#Country> .
+
+
+###  http://www.ronuphdswaishe.org/#isTalukaOf
+<http://www.ronuphdswaishe.org/#isTalukaOf> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://www.ronuphdswaishe.org/#Taluka> ;
+                                            rdfs:range <http://www.ronuphdswaishe.org/#District> .
+
+
+###  http://www.ronuphdswaishe.org/#isTypeOf
+<http://www.ronuphdswaishe.org/#isTypeOf> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#PostGraduation>
+                                                                             <http://www.ronuphdswaishe.org/#UnderGraduation>
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                          rdfs:range <http://www.ronuphdswaishe.org/#Course> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ronuphdswaishe.org/#address1
+<http://www.ronuphdswaishe.org/#address1> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Institution>
+                                                                             <http://www.ronuphdswaishe.org/#StatutoryBody>
+                                                                             <http://www.ronuphdswaishe.org/#University>
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#address2
+<http://www.ronuphdswaishe.org/#address2> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Institution>
+                                                                             <http://www.ronuphdswaishe.org/#StatutoryBody>
+                                                                             <http://www.ronuphdswaishe.org/#University>
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#aishecodeOfInstitution
+<http://www.ronuphdswaishe.org/#aishecodeOfInstitution> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfCountry
+<http://www.ronuphdswaishe.org/#codeOfCountry> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.ronuphdswaishe.org/#Country> ;
+                                               rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfCourse
+<http://www.ronuphdswaishe.org/#codeOfCourse> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.ronuphdswaishe.org/#Course> ;
+                                              rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfDistrict
+<http://www.ronuphdswaishe.org/#codeOfDistrict> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.ronuphdswaishe.org/#District> ;
+                                                rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfInstitution
+<http://www.ronuphdswaishe.org/#codeOfInstitution> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                   rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfManagement
+<http://www.ronuphdswaishe.org/#codeOfManagement> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#Management> ;
+                                                  rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfState
+<http://www.ronuphdswaishe.org/#codeOfState> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://www.ronuphdswaishe.org/#State> ;
+                                             rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfStatutoryBody
+<http://www.ronuphdswaishe.org/#codeOfStatutoryBody> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.ronuphdswaishe.org/#StatutoryBody> ;
+                                                     rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#codeOfUniversity
+<http://www.ronuphdswaishe.org/#codeOfUniversity> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#University> ;
+                                                  rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#courseFee
+<http://www.ronuphdswaishe.org/#courseFee> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.ronuphdswaishe.org/#Course> ;
+                                           rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#courseIntake
+<http://www.ronuphdswaishe.org/#courseIntake> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.ronuphdswaishe.org/#Course> ;
+                                              rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#designationOfNodal
+<http://www.ronuphdswaishe.org/#designationOfNodal> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#emailIdNodalOfficer
+<http://www.ronuphdswaishe.org/#emailIdNodalOfficer> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                     rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#emailIdPrincipal
+<http://www.ronuphdswaishe.org/#emailIdPrincipal> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#gps_latituted
+<http://www.ronuphdswaishe.org/#gps_latituted> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                               rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#gps_longitude
+<http://www.ronuphdswaishe.org/#gps_longitude> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                               rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#levelOfCourse
+<http://www.ronuphdswaishe.org/#levelOfCourse> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Course>
+                                                                                  <http://www.ronuphdswaishe.org/#Institution>
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                               rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfCountry
+<http://www.ronuphdswaishe.org/#nameOfCountry> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.ronuphdswaishe.org/#Country> ;
+                                               rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfCourse
+<http://www.ronuphdswaishe.org/#nameOfCourse> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.ronuphdswaishe.org/#Course> ;
+                                              rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfDistrict
+<http://www.ronuphdswaishe.org/#nameOfDistrict> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.ronuphdswaishe.org/#Course> ;
+                                                rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfInstitution
+<http://www.ronuphdswaishe.org/#nameOfInstitution> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                   rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfNodalofficer
+<http://www.ronuphdswaishe.org/#nameOfNodalofficer> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfPrincipal
+<http://www.ronuphdswaishe.org/#nameOfPrincipal> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                 rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfState
+<http://www.ronuphdswaishe.org/#nameOfState> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://www.ronuphdswaishe.org/#State> ;
+                                             rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfStatutoryBody
+<http://www.ronuphdswaishe.org/#nameOfStatutoryBody> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.ronuphdswaishe.org/#StatutoryBody> ;
+                                                     rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#nameOfUniversity
+<http://www.ronuphdswaishe.org/#nameOfUniversity> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#University> ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#ncontactNo
+<http://www.ronuphdswaishe.org/#ncontactNo> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                            rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#pcontactNo
+<http://www.ronuphdswaishe.org/#pcontactNo> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                            rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#pincode
+<http://www.ronuphdswaishe.org/#pincode> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                         rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#preRequestingCourse
+<http://www.ronuphdswaishe.org/#preRequestingCourse> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Course>
+                                                                                        <http://www.ronuphdswaishe.org/#Institution>
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                     rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#telephoneOfNodal
+<http://www.ronuphdswaishe.org/#telephoneOfNodal> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#typeOfArea
+<http://www.ronuphdswaishe.org/#typeOfArea> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.ronuphdswaishe.org/#Area> ;
+                                            rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#typeOfInstitution
+<http://www.ronuphdswaishe.org/#typeOfInstitution> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain owl:Thing .
+
+
+###  http://www.ronuphdswaishe.org/#typeOfManagement
+<http://www.ronuphdswaishe.org/#typeOfManagement> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#Management> ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#typeOfUniversity
+<http://www.ronuphdswaishe.org/#typeOfUniversity> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#website
+<http://www.ronuphdswaishe.org/#website> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain [ owl:intersectionOf ( <http://www.ronuphdswaishe.org/#Institution>
+                                                                            <http://www.ronuphdswaishe.org/#StatutoryBody>
+                                                                            <http://www.ronuphdswaishe.org/#University>
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                         rdfs:range xsd:string .
+
+
+###  http://www.ronuphdswaishe.org/#yearOfAffiliation
+<http://www.ronuphdswaishe.org/#yearOfAffiliation> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                   rdfs:range xsd:integer .
+
+
+###  http://www.ronuphdswaishe.org/#yearOfEstablished
+<http://www.ronuphdswaishe.org/#yearOfEstablished> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.ronuphdswaishe.org/#Institution> ;
+                                                   rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ronuphdswaishe.org/#Area
+<http://www.ronuphdswaishe.org/#Area> rdf:type owl:Class ;
+                                      rdfs:subClassOf owl:Thing .
+
+
+###  http://www.ronuphdswaishe.org/#Country
+<http://www.ronuphdswaishe.org/#Country> rdf:type owl:Class ;
+                                         rdfs:subClassOf owl:Thing ;
+                                         rdfs:label "Country" .
+
+
+###  http://www.ronuphdswaishe.org/#Course
+<http://www.ronuphdswaishe.org/#Course> rdf:type owl:Class ;
+                                        rdfs:subClassOf owl:Thing .
+
+
+###  http://www.ronuphdswaishe.org/#District
+<http://www.ronuphdswaishe.org/#District> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.ronuphdswaishe.org/#State> ;
+                                          rdfs:label "District" .
+
+
+###  http://www.ronuphdswaishe.org/#Institution
+<http://www.ronuphdswaishe.org/#Institution> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.ronuphdswaishe.org/#University> .
+
+
+###  http://www.ronuphdswaishe.org/#Management
+<http://www.ronuphdswaishe.org/#Management> rdf:type owl:Class ;
+                                            rdfs:subClassOf owl:Thing .
+
+
+###  http://www.ronuphdswaishe.org/#PostGraduation
+<http://www.ronuphdswaishe.org/#PostGraduation> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.ronuphdswaishe.org/#Course> .
+
+
+###  http://www.ronuphdswaishe.org/#PostalCode
+<http://www.ronuphdswaishe.org/#PostalCode> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.ronuphdswaishe.org/#Taluka> ;
+                                            rdfs:label "PostalCode" .
+
+
+###  http://www.ronuphdswaishe.org/#State
+<http://www.ronuphdswaishe.org/#State> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.ronuphdswaishe.org/#Country> ;
+                                       rdfs:label "State" .
+
+
+###  http://www.ronuphdswaishe.org/#StatutoryBody
+<http://www.ronuphdswaishe.org/#StatutoryBody> rdf:type owl:Class ;
+                                               rdfs:subClassOf owl:Thing .
+
+
+###  http://www.ronuphdswaishe.org/#Street
+<http://www.ronuphdswaishe.org/#Street> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.ronuphdswaishe.org/#Taluka> ;
+                                        rdfs:label "Street" .
+
+
+###  http://www.ronuphdswaishe.org/#Taluka
+<http://www.ronuphdswaishe.org/#Taluka> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.ronuphdswaishe.org/#District> ;
+                                        rdfs:label "Taluka" .
+
+
+###  http://www.ronuphdswaishe.org/#UnderGraduation
+<http://www.ronuphdswaishe.org/#UnderGraduation> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.ronuphdswaishe.org/#Course> .
+
+
+###  http://www.ronuphdswaishe.org/#University
+<http://www.ronuphdswaishe.org/#University> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.ronuphdswaishe.org/#StatutoryBody> .
+
+
+###  http://www.ronuphdswaishe.org/#Village
+<http://www.ronuphdswaishe.org/#Village> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.ronuphdswaishe.org/#Taluka> .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
