@@ -1,0 +1,1841 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2021/0/untitled-ontology-112#"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2021/0/untitled-ontology-112"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.jobontologyportal.com/ontology#">
+    <owl:Ontology rdf:about="http://www.jobontologyportal.com/ontology">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the Job Search and Posting Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#hasCompanyExp -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#hasCompanyExp">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#hasEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#hasEducation">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#hasSkill">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#hires -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#hires">
+        <owl:inverseOf rdf:resource="http://www.jobontologyportal.com/ontology#isHiredBy"/>
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#isHiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#isHiredBy">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#isPostBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#isPostBy">
+        <owl:inverseOf rdf:resource="http://www.jobontologyportal.com/ontology#posts"/>
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#isWorkingIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#isWorkingIn">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#posts -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#posts">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#requireSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#requireSkill">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#requiresEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.jobontologyportal.com/ontology#requiresEducation">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#company_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#company_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#company_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#company_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#company_website -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#company_website">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#companycity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#companycity">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#companycountry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#companycountry">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#companydomain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#companydomain">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#companystate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#companystate">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#designation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#designation">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#education_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#education_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_add1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_add1">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_add2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_add2">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_email">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_mobile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_mobile">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_pincode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_pincode">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_pwd">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#emp_uname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#emp_uname">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_description">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_isactive -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_isactive">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_loc_city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_loc_city">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_loc_country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_loc_country">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_loc_state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_loc_state">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_offer_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_offer_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_offered_sal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_offered_sal">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_post_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_post_date">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_title">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#job_vacancies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#job_vacancies">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_application_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_application_date">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_city">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_country">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_current_designation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_current_designation">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_currentsal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_currentsal">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_dob -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_dob">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_email">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_experience">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_fname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_fname">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_gender">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_lname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_lname">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_min_expectedsal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_min_expectedsal">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_mobile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_mobile">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#js_state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#js_state">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#nos_months -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#nos_months">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#nos_years -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#nos_years">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#other_degree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#other_degree">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#pg_degree_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#pg_degree_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#pg_passing_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#pg_passing_year">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#pg_university_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#pg_university_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#skill_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#skill_id">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#skill_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#skill_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#ug_degree_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#ug_degree_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#ug_passing_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#ug_passing_year">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#ug_univesity_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jobontologyportal.com/ontology#ug_univesity_name">
+        <rdfs:domain rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#Company">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Company</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Country -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#Country"/>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#Education">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Education</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#Employer">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employer</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#JobOffer">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JobOffer</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JobOffer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JobSeeker</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JobSeeker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Skill -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#Skill">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skill</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience -->
+
+    <owl:Class rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WorkExperience</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WorkExperience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infosys</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.infosys.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vadodara</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Website Development</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujarat</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCL Technologies</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.tcs.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmedabad</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Development</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujarat</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wipro Limited</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.wipro.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animations</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">444</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L&amp;Tinfotech Ltd</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.lntinfotech.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Testing</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">555</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patni Computers</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.PatniComputers.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ujjain</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Networking</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MadhyaPradesh</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mphasis Ltd</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.mphasis.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kota</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajasthan</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rangam Infotech</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rangaminfotech.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chennai</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CyberSecurity</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tamilnadu</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rishabh Software</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.rishabhsoft.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ArtificialIntelligence and ML</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Company9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Company9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Company"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</ontology:company_id>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCS Private Limited</ontology:company_name>
+        <ontology:company_website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.tcs.com</ontology:company_website>
+        <ontology:companycity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nasik</ontology:companycity>
+        <ontology:companycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:companycountry>
+        <ontology:companydomain rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research And Development</ontology:companydomain>
+        <ontology:companystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:companystate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MCA</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changa University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCA</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S P University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education10">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMITY university</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PGDCA</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C U Shah University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSc.IT</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parul University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCA</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parul University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSc.ST</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S P University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSc.IT</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S P University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSc.IT</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parul University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSc.IT</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDIT University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMCA</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parul University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mtech</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S P University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSE</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDIT University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ME</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C U Shah University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSE</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C U Shah University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTech</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changa University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTech</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changa University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Education9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Education9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Education"/>
+        <ontology:education_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ontology:education_id>
+        <ontology:other_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</ontology:other_degree>
+        <ontology:pg_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSc ComputerScience</ontology:pg_degree_name>
+        <ontology:pg_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</ontology:pg_passing_year>
+        <ontology:pg_university_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S P University</ontology:pg_university_name>
+        <ontology:ug_degree_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSc ComputerScience</ontology:ug_degree_name>
+        <ontology:ug_passing_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</ontology:ug_passing_year>
+        <ontology:ug_univesity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changa University</ontology:ug_univesity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT Park</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyderabad</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruchitkumar@gmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1011</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patel Ruchitkumar</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">388001</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruchitkumar@123</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruchitkumar</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer10">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MG Road</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagpur</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tadiva@yahoo.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vhito Tadiwa</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">379184</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tadiva@129</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tadiva</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32,National Plaza</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neel@yahoo.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1022</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patel Neel</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">388120</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neel@123</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neel</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MG Road</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nyasha@hotmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1033</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mudoti Nyasha</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">387003</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nyasha@123</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nyasha</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">444</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gandhi Chowk</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kota</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ritesh@gmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1044</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kushwah Ritesh</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385886</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ritesh@123</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ritesh</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">555</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4/7,Silicon Park</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chennai</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abhishek@yahoo.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1055</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mashruwala Abhishek</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">384769</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abhishek@124</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abhishek</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,National Park</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysuru</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rajnish@gmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1066</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jha Rajnish kumar</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">383652</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rajnish@125</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rajnish</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MG Road</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucknow</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shrushti@gmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1077</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haware Shrushti</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">382535</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shrushti@126</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shrushti</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gandhi Chowk</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanpur</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priyal@gmail.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1088</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gandhi Priyal</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">381418</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priyal@127</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priyal</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Employer9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Employer9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Employer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</ontology:company_id>
+        <ontology:emp_add1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36,IT Plaza</ontology:emp_add1>
+        <ontology:emp_add2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nashik</ontology:emp_add2>
+        <ontology:emp_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saurav@yahoo.com</ontology:emp_email>
+        <ontology:emp_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1099</ontology:emp_id>
+        <ontology:emp_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:emp_mobile>
+        <ontology:emp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rai Saurav kumar</ontology:emp_name>
+        <ontology:emp_pincode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">380301</ontology:emp_pincode>
+        <ontology:emp_pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saurav@128</ontology:emp_pwd>
+        <ontology:emp_uname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saurav</ontology:emp_uname>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ontology:job_offer_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">esponsibility for setting up, developing and maintaining computer networks </ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-10T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Engineer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer10">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To plan, design, analyse, and provide technical support for data communications network or group of networks in the company.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysuru</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-05T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Analyst</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer11">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> involved in the planning and development of the database, as well as in troubleshooting any issues on behalf of the users. Maintain data consistency</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucknow</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UttarPradesh</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-07T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Administrator</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conducting IT skills gap analyses among employees. Performing role-specific training on tools and programs each team uses daily.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-01T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Trainer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Researching, designing, implementing and managing software programs. Testing and evaluating new programs.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ujjain</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MadhyaPradesh</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-02T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Developer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">444</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To determine the strengths and weaknesses of the existing systems and identifying areas for improvement.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaipur </ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajasthan</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-03T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer System Analysts</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">555</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">responsible for all aspects of the design, development and delivery of data and database solutions</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chennai</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamilNadu</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-02T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Engineer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to ensure the software created by developers is fit for purpose and any bugs or issues are removed within a product before it gets deployed to everyday users.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-10T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Tester</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">responsible for the coding, design and layout of a website according to a company&apos;s specifications</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-11T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Developer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">responsible for creating the design and layout of a website or web pages. It and can mean working on a brand new website or updating an already existing site.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-03T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Designer</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobOffer9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobOffer9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobOffer"/>
+        <ontology:company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</ontology:company_id>
+        <ontology:job_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To invent and design new approaches to computing technology and find innovative uses for existing technology.</ontology:job_description>
+        <ontology:job_isactive rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</ontology:job_isactive>
+        <ontology:job_loc_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hubli</ontology:job_loc_city>
+        <ontology:job_loc_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:job_loc_country>
+        <ontology:job_loc_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:job_loc_state>
+        <ontology:job_offer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ontology:job_offer_id>
+        <ontology:job_offered_sal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</ontology:job_offered_sal>
+        <ontology:job_post_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-04T00:00:00</ontology:job_post_date>
+        <ontology:job_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer and Information Research Scientist</ontology:job_title>
+        <ontology:job_vacancies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:job_vacancies>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:skill_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-10T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java Developer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-10-23T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HinaC@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hina</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chokshi</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker10">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-05T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysuru</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHP Developer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">22000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-05-16T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archanasingh@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archana</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singh</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker11">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-07T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Tester</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-09-18T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhvi@yahoo.co.in</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madhvi</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaturvedi</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker12">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-09T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chennai</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WebProgrammer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-10-19T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vipulshah@yahoo.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vipul </ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shah</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">55000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamilNadu</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker13">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-11T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaipur </ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Administrator</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">82000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-02-18T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parakhsharma@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parakh</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharma</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">85000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajasthan</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-01T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHP Developer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">17000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-10-23T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karunapatel@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karuna</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patel</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-02T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ujjain</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Tester</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-06-03T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tejalbhatt@yahoo.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tejal</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bhatt</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MadhyaPradesh</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-03T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaipur </ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Designer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">22000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-05-06T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kedarbhatt@yahoo.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kedar</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bhatt</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajasthan</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-02T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chennai</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Designer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-09-08T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arunpal@yahoo.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arun</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pal</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamilNadu</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-10T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animator</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">32000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-10-29T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank issac@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank </ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Issac</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-11T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Designer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-02-08T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danielmudoti@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mudoti</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-03T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pune</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Administrator</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-09-05T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niravpatel@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nirav</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patel</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maharastra</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#JobSeeker9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#JobSeeker9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#JobSeeker"/>
+        <ontology:js_application_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-05-04T00:00:00</ontology:js_application_date>
+        <ontology:js_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hubli</ontology:js_city>
+        <ontology:js_country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</ontology:js_country>
+        <ontology:js_current_designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Designer</ontology:js_current_designation>
+        <ontology:js_currentsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">77000.0</ontology:js_currentsal>
+        <ontology:js_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-08-04T00:00:00</ontology:js_dob>
+        <ontology:js_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atulbansal@gmail.com</ontology:js_email>
+        <ontology:js_experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:js_experience>
+        <ontology:js_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atul</ontology:js_fname>
+        <ontology:js_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</ontology:js_gender>
+        <ontology:js_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</ontology:js_id>
+        <ontology:js_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bansal</ontology:js_lname>
+        <ontology:js_min_expectedsal rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80000.0</ontology:js_min_expectedsal>
+        <ontology:js_mobile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</ontology:js_mobile>
+        <ontology:js_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karnataka</ontology:js_state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Skill1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Skill1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:skill_id>
+        <ontology:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Development</ontology:skill_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Skill2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Skill2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:skill_id>
+        <ontology:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Tester</ontology:skill_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Skill3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Skill3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:skill_id>
+        <ontology:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware </ontology:skill_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#Skill4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#Skill4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#Skill"/>
+        <ontology:skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:skill_id>
+        <ontology:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Application</ontology:skill_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience1">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infosys</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Developer</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience2">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCL Technologies</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer System Analysts</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience3">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wipro Limited</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Engineer</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience4">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L&amp;Tinfotech Ltd</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Tester</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience5">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patni Computers</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Developer</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience6">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mphasis Ltd</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Designer</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience7">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rangam Infotech</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer and Information Research Scientist</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience8">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rishabh Software</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Analyst</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontology:nos_years>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jobontologyportal.com/ontology#WorkExperience9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jobontologyportal.com/ontology#WorkExperience9">
+        <rdf:type rdf:resource="http://www.jobontologyportal.com/ontology#WorkExperience"/>
+        <ontology:company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCS Private Limited</ontology:company_name>
+        <ontology:designation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Administrator</ontology:designation>
+        <ontology:nos_months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ontology:nos_months>
+        <ontology:nos_years rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontology:nos_years>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
